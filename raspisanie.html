@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>ICE ACE Школа сноуборда</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="page-headline">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="#" alt="logo" class="logo-img">
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li class="main-nav__item">
+            <a href="raspisanie.html" class="main-nav__link main-nav__link_active">Расписание</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="instruktori.html" class="main-nav__link">Инструкторы</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Стоимость</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Как добраться</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="contacts">
+        <a href="tel:+78008008080" class="contacts__phone">8(800)800-80-80</a>
+        <a href="#" class="btn">Записаться</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="program-choice">
+      <div class="container">
+        <h1 class="program-choice__header">Выбрать программу</h1>
+        <table class="program-choice__table">
+          <tr>
+            <th>Спорт</th>
+            <th>Инструктор</th>
+            <th>Дата</th>
+            <th>Время</th>
+            <th>Стоимость</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>Сноуборд</td>
+            <td>Константин Константинопольский</td>
+            <td>30.03.2017</td>
+            <td>12:00</td>
+            <td>2000 руб.</td>
+            <td><a href="#" class="choice-table__link">Записаться</a></td>
+          </tr>
+          <tr>
+            <td>Сноуборд</td>
+            <td>Константин Константинопольский</td>
+            <td>01.04.2017</td>
+            <td>12:00</td>
+            <td>2000 руб.</td>
+            <td><a href="#" class="choice-table__link">Записаться</a></td>
+          </tr>
+          <tr>
+            <td>Лыжи</td>
+            <td>Степан Александров</td>
+            <td>01.04.2017</td>
+            <td>13:00</td>
+            <td>3000 руб.</td>
+            <td><a href="#" class="choice-table__link">Записаться</a></td>
+          </tr>
+          <tr>
+            <td>Лыжи</td>
+            <td>Виталий Сергеев</td>
+            <td>03.04.2017</td>
+            <td>14:00</td>
+            <td>4000 руб.</td>
+            <td><a href="#" class="choice-table__link">Записаться</a></td>
+          </tr>
+          <tr>
+            <td>Сноуборд</td>
+            <td>Арсений Петров</td>
+            <td>04.04.2017</td>
+            <td>14:00</td>
+            <td>4000 руб.</td>
+            <td><a href="#" class="choice-table__link">Записаться</a></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="coach-card">
+      <div class="container">
+        <div class="container-inner">
+          <div class="coach-photo">
+            <img src="#" alt="фото инструктора4">
+          </div>
+          <div class="coach-card-text">
+            <h2>Free ride / продвинутый уровень</h2>
+            <span>Дата занятия - 30 марта 2017 года.</span>
+            <h3>Абонемент на разовое посещение (3 часа)</h3>
+            <p>Занятие расчитано на опытных учеников и проходит вне подготовленной трассы, рядом с горнолыжной базой. Катание по нетронутому снегу раскрывает все возможности горных лыж, а опытный инструктор научит контролировать лыжи на любой поверхности.</p>
+            <p><a href="#" class="coach-card-text__link">Узнать больше</a></p>
+          </div>
+          <div class="coach-card-price">
+            <span>2 000 <!--ИКОНКА РУБЛЯ!!!!!!!!!!!!!!!!!!!! --></span>
+            <a href="#" class="coach-card__btn">Купить</a>
+          </div>
+        </div>
+        <ul class="coach-card-list">
+          <li class="coach-card__item">
+            <a href="#" class="coach-card__link">&lt</a>
+          </li>
+          <li class="coach-card__item">
+            <a href="#" class="coach-card__link coach-card__link_active">1</a>
+          </li>
+          <li class="coach-card__item">
+            <a href="#" class="coach-card__link">2</a>
+          </li>
+          <li class="coach-card__item">
+            <a href="#" class="coach-card__link">3</a>
+          </li>
+          <li class="coach-card__item">
+            <a href="#" class="coach-card__link">4</a>
+          </li>
+          <li class="coach-card__item">
+            <a href="#" class="coach-card__link">5</a>
+          </li>
+          <li class="coach-card__item">
+            <a href="#" class="coach-card__link">&gt</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="ringback-form">
+      <div class="container-ringback">
+        <h2 class="container-ringback__header">Заказать обратный звонок</h2>
+        <form action="#">
+          <label>*Имя<input type="text" name="Name"></label>
+          <label>*Фамилия<input type="text" name="Surname"></label>
+          <label>*Телефон<input type="text" name="Cell-phone"></label>
+          <label>Ваше сообщение<input type="text" name="Your message"></label>
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-background">
+      <div class="container">
+        <a href="#" class="logo">
+          <img src="#" alt="logo" class="logo-img">
+        </a>
+        <div class="socials">
+          <ul class="socials-list">
+            <li class="socials__item">
+              <a href="#" class="socials__link">Иконка ВК</a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link">Иконка Youtube</a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link">Иконка Insta</a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link">Иконка Face</a>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts">
+          <a href="tel:+78008008080" class="contacts__phone">8(800)800-80-80</a>
+          <a href="mailto" class="mail">hello@iceace.com</a>
+        </div>
+        <div class="copyright">
+          <p>&copy "ICE ACE" - школа сноуборда и горных лыж. Все права защищены</p>
+        </div>
+        <div class="footer-nav">
+          <ul class="footer-nav-list">
+            <li class="footer-nav__item">
+              <a href="raspisanie.html" class="footer-nav__link">Расписание</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="instruktori.html" class="footer-nav__link">Инструкторы</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">Стоимость</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">Как добраться</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
