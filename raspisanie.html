@@ -8,13 +8,13 @@
 </head>
 <body>
 
-  <header class="page-headline">
+  <header class="page-header">
     <div class="container">
       <a href="index.html" class="logo">
         <img src="#" alt="logo" class="logo-img">
       </a>
       <nav class="main-nav">
-        <ul class="main-nav-list">
+        <ul class="main-nav__list">
           <li class="main-nav__item">
             <a href="raspisanie.html" class="main-nav__link main-nav__link_active">Расписание</a>
           </li>
@@ -31,7 +31,7 @@
       </nav>
       <div class="contacts">
         <a href="tel:+78008008080" class="contacts__phone">8(800)800-80-80</a>
-        <a href="#" class="btn">Записаться</a>
+        <a href="#" class="contacts__btn">Записаться</a>
       </div>
     </div>
   </header>
@@ -40,6 +40,7 @@
     <section class="program-choice">
       <div class="container">
         <h1 class="program-choice__header">Выбрать программу</h1>
+
         <table class="program-choice__table">
           <tr>
             <th>Спорт</th>
@@ -95,23 +96,24 @@
 
     <section class="coach-card">
       <div class="container">
-        <div class="container-inner">
+        <article class="coach-inner">
           <div class="coach-photo">
-            <img src="#" alt="фото инструктора4">
+            <img src="#" alt="фото инструктора4" class="coach-photo__img">
           </div>
-          <div class="coach-card-text">
-            <h2>Free ride / продвинутый уровень</h2>
-            <span>Дата занятия - 30 марта 2017 года.</span>
-            <h3>Абонемент на разовое посещение (3 часа)</h3>
-            <p>Занятие расчитано на опытных учеников и проходит вне подготовленной трассы, рядом с горнолыжной базой. Катание по нетронутому снегу раскрывает все возможности горных лыж, а опытный инструктор научит контролировать лыжи на любой поверхности.</p>
-            <p><a href="#" class="coach-card-text__link">Узнать больше</a></p>
+          <div class="coach-block">
+            <h2 class="coach-block__title1">Free ride / продвинутый уровень</h2>
+            <span class="coach-block__text1">Дата занятия - 30 марта 2017 года.</span>
+            <h3 class="coach-block__title2">Абонемент на разовое посещение (3 часа)</h3>
+            <p class="coach-block__text2">Занятие расчитано на опытных учеников и проходит вне подготовленной трассы, рядом с горнолыжной базой. Катание по нетронутому снегу раскрывает все возможности горных лыж, а опытный инструктор научит контролировать лыжи на любой поверхности.</p>
+            <p class="coach-block__item"><a href="#" class="coach-block__link">Узнать больше</a></p>
           </div>
-          <div class="coach-card-price">
-            <span>2 000 <!--ИКОНКА РУБЛЯ!!!!!!!!!!!!!!!!!!!! --></span>
-            <a href="#" class="coach-card__btn">Купить</a>
-          </div>
+          <div class="coach-price">
+            <span class="coach-price__text">2 000 <!--ИКОНКА РУБЛЯ!!!!!!!!!!!!!!!!!!!! --></span>
+            <a href="#" class="coach-price__btn">Купить</a>
+          </article>
         </div>
-        <ul class="coach-card-list">
+
+        <ul class="coach-card__list">
           <li class="coach-card__item">
             <a href="#" class="coach-card__link">&lt</a>
           </li>
@@ -141,10 +143,14 @@
       <div class="container-ringback">
         <h2 class="container-ringback__header">Заказать обратный звонок</h2>
         <form action="#">
+          <!-- Погугли type -->
+          <!-- И вообще формы -->
           <label>*Имя<input type="text" name="Name"></label>
           <label>*Фамилия<input type="text" name="Surname"></label>
           <label>*Телефон<input type="text" name="Cell-phone"></label>
+          <!-- type="tel" -->
           <label>Ваше сообщение<input type="text" name="Your message"></label>
+          <!-- textarea -->
           <button type="submit">Отправить</button>
         </form>
       </div>
@@ -152,13 +158,13 @@
   </main>
 
   <footer>
-    <div class="footer-background">
+    <div class="footer-container">
       <div class="container">
         <a href="#" class="logo">
           <img src="#" alt="logo" class="logo-img">
         </a>
         <div class="socials">
-          <ul class="socials-list">
+          <ul class="socials__list">
             <li class="socials__item">
               <a href="#" class="socials__link">Иконка ВК</a>
             </li>

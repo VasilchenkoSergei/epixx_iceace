@@ -15,16 +15,14 @@
     </div>
   </div>
 
-  <header class="page-headline">
-
-    <!-- нужно ли задавать класс хэдэру если он один на странице?-->
-
+  <header class="page-header">
     <div class="container">
       <a href="index.html" class="logo">
         <img src="#" alt="logo" class="logo-img">
-      </a>
+      </a><!-- На главной страние лого не делают ссылкой, это вопрос в сторону сео -->
+
       <nav class="main-nav">
-        <ul class="main-nav-list">
+        <ul class="main-nav__list">
           <li class="main-nav__item">
             <a href="raspisanie.html" class="main-nav__link">Расписание</a>
           </li>
@@ -41,7 +39,7 @@
       </nav>
       <div class="contacts">
         <a href="tel:+78008008080" class="contacts__phone">8(800)800-80-80</a>
-        <a href="#" class="btn">Записаться</a>
+        <a href="#" class="contacts__btn">Записаться</a>
       </div>
     </div>
   </header>
@@ -51,43 +49,43 @@
       <div class="container">
         <h2 class="services__title">Наши услуги</h2>
         <p class="services__text">Для взрослых и детей 6+ / любого уровня подготовки</p>
-        <div class="services-list">
+        <div class="services__list">
           <article class="services-item">
-            <div class="services-item-img">
-              <img src="#" alt="Лыжник1" class="services__photo1">
+            <div class="services-item__img">
+              <img src="#" alt="Лыжник1" class="services-item__img-wrap">
             </div>
-            <div class="services-item-info">
-              <h3 class="services-item__title">Разовое посещение</h3>
-              <p>Впервые здесь? Тогда эта возможность точно для вас. Приходите на разовое занятие и проникнитесь атмосферой школы, познакомьтесь с инструкторами и узнаете о том, как проходит обучение. После занятия мы определим ваш уровень и прикинем план занятий</p>
-              <footer>
-                <span>3 часа</span>
-                <a href="#" class="service-item__link"></a>
+            <div class="services-info">
+              <h3 class="services-info__title">Разовое посещение</h3>
+              <p class="services-info__text">Впервые здесь? Тогда эта возможность точно для вас. Приходите на разовое занятие и проникнитесь атмосферой школы, познакомьтесь с инструкторами и узнаете о том, как проходит обучение. После занятия мы определим ваш уровень и прикинем план занятий</p>
+              <footer class="services-footer">
+                <span class="services-footer__span">3 часа</span>
+                <a href="#" class="services-footer__link"></a>
               </footer>
             </div>
           </article>
           <article class="services-item">
-            <div class="services-item-img">
-              <img src="#" alt="Лыжник2" class="services__photo2">
+            <div class="services-item__img">
+              <img src="#" alt="Лыжник2" class="services-item__img-wrap">
             </div>
-            <div class="services-item-info">
-              <h3 class="services-item__title">Краткий курс</h3>
-              <p>Экспресс курс рассчитан на тех, кто хочет повысить свой уровень в короткий срок, узнать новые техники катания и получить лайфхаки "как кататься как чемпион" от опытных инструкторов, подъодит как для новичков, так и более опытных</p>
-              <footer>
-                <span>5 занятий</span>
-                <a href="#" class="services-item__link"></a>
+            <div class="services-info">
+              <h3 class="services-info__title">Краткий курс</h3>
+              <p class="services-info__text">Экспресс курс рассчитан на тех, кто хочет повысить свой уровень в короткий срок, узнать новые техники катания и получить лайфхаки "как кататься как чемпион" от опытных инструкторов, подъодит как для новичков, так и более опытных</p>
+              <footer class="services-footer">
+                <span class="services-footer__span">5 занятий</span>
+                <a href="#" class="services-footer__link"></a>
               </footer>
             </div>
           </article>
           <article class="services-item">
-            <div class="services-item-img">
-              <img src="#" alt="Лыжник3" class="services__photo3">
+            <div class="services-item__img">
+              <img src="#" alt="Лыжник3" class="services-item__img-wrap">
             </div>
-            <div class="services-item-info">
-              <h3 class="services-item__title">Полный курс</h3>
-              <p>Продвинутый курс для самых вдохновленных горными лыжами и сноубордом, здест вы не только улучшите свою технику, но и получите много дополнительных обучающих материалов и видео-уроков от участников мировых чемпионатов, здесь вы узнаете все</p>
-              <footer>
-                <span>10 занятий</span>
-                <a href="#" class="services-item__link"></a>
+            <div class="services-info">
+              <h3 class="services-info__title">Полный курс</h3>
+              <p class="services-info__text">Продвинутый курс для самых вдохновленных горными лыжами и сноубордом, здест вы не только улучшите свою технику, но и получите много дополнительных обучающих материалов и видео-уроков от участников мировых чемпионатов, здесь вы узнаете все</p>
+              <footer class="services-footer">
+                <span class="services-footer__span">10 занятий</span>
+                <a href="#" class="services-footer__link"></a>
               </footer>
             </div>
           </article>
@@ -98,68 +96,68 @@
     <section class="trust">
       <div class="container">
         <h2 class="trust__title">Почему мы</h2>
-        <div class="trust-list">
+        <div class="trust__list">
           <article class="trust-item">
             <h3 class="trust-item__title">100% гарантия результата</h3>
-            <p>Уверены - научиться кататься и улучшить свой навык может каждый, и мы гарантируем результат уже через 5 занятий</p>
+            <p class="trust-item__text">Уверены - научиться кататься и улучшить свой навык может каждый, и мы гарантируем результат уже через 5 занятий</p>
           </article>
           <article class="trust-item">
             <h3 class="trust-item__title">Опытные инструкторы</h3>
-            <p>У всех инструкторов школы есть международный сертификат, который дает право обучать катанию на сноуборде и горных лыжах</p>
+            <p class="trust-item__text">У всех инструкторов школы есть международный сертификат, который дает право обучать катанию на сноуборде и горных лыжах</p>
           </article>
           <article class="trust-item">
             <h3 class="trust-item__title">Индивидуальные занятия и расписание</h3>
-            <p>Мы любим индивидуальный подход, поэтому все занятия с тренером - персональные, а график обучения составляете вы сами</p>
+            <p class="trust-item__text">Мы любим индивидуальный подход, поэтому все занятия с тренером - персональные, а график обучения составляете вы сами</p>
           </article>
           <article class="trust-item">
             <h3 class="trust-item__title">Инвентарь и одежда</h3>
-            <p>Все, что необходимо для комфортного занятия - включено в стоимость, с нами не нужно беспокоиться об аренде снаряжения и покупке дорогой одежды</p>
+            <p class="trust-item__text">Все, что необходимо для комфортного занятия - включено в стоимость, с нами не нужно беспокоиться об аренде снаряжения и покупке дорогой одежды</p>
           </article>
           <article class="trust-item">
             <h3 class="trust-item__title">Безопасность</h3>
-            <p>Каждый инструктор подбирает технику катания и угол склона индивидуально под ваш уровень и гарантирует 100% безопасность во время занятия</p>
+            <p class="trust-item__text">Каждый инструктор подбирает технику катания и угол склона индивидуально под ваш уровень и гарантирует 100% безопасность во время занятия</p>
           </article>
           <article class="trust-item">
             <h3 class="trust-item__title">Трансфер</h3>
-            <p>30 минут и вы на месте, столько примерно занимает дорога из центра города до склона на нашем бесплатном трансфере, который легко забронировать</p>
+            <p class="trust-item__text">30 минут и вы на месте, столько примерно занимает дорога из центра города до склона на нашем бесплатном трансфере, который легко забронировать</p>
           </article>
         </div>
       </div>
     </section>
 
     <section class="sale">
-      <div class="container-background">
+      <div class="container-sale">
         <h2 class="sale__title">Скидка на абонементы</h2>
-        <div class="sale-list">
+        <div class="sale__list">
           <article class="sale-item">
             <h3 class="sale-item__title">Пробуй</h3>
-            <p>Дарим скидку <span>5%</span> новичкам, прошедшим разовое занятие</p>
+            <p class="sale-item__text">Дарим скидку <span class="sale-item__span">5%</span> новичкам, прошедшим разовое занятие</p>
           </article>
           <article class="sale-item">
             <h3 class="sale-item__title">Катайся вместе</h3>
-            <p>Получи скидку <span>10%</span>, если друг записался по твоей рекомендации</p>
+            <p class="sale-item__text">Получи скидку <span class="sale-item__span">10%</span>, если друг записался по твоей рекомендации</p>
           </article>
           <article class="sale-item">
             <h3 class="sale-item__title">Учись всей семьей</h3>
-            <p>/Покупай абонемент для себя и получи скидку <span>15%</span> для ребенка</p>
+            <p class="sale-item__text">/Покупай абонемент для себя и получи скидку <span class="sale-item__span">15%</span> для ребенка</p>
           </article>
-          <a href="#" class="btn">Записаться</a>
+          <a href="#" class="sale__btn">Записаться</a>
         </div>
       </div>
     </section>
 
     <section class="team">
       <h2 class="team__title">Команда</h2>
-      <div class="team-list">
-        <p>Привет! Мы - команда инструкторов ICE ACE, с нами вы научитесь кататься как настоящие асы, потому что мы знаем, что такое выкладываться на склоне, бороться со стихией, добиваться высоких результатов и покорять самые сложные трассы. В наших рядах призеры мировых чемпионатов и они готовы поделиться своим ценным опытом, чтобы каждый урок стал вашей личной победой</p>
-        <a href="instruktori.html" class="team-btn">Выбрать инструктора</a>
+      <div class="team__list">
+        <p class="team__text">Привет! Мы - команда инструкторов ICE ACE, с нами вы научитесь кататься как настоящие асы, потому что мы знаем, что такое выкладываться на склоне, бороться со стихией, добиваться высоких результатов и покорять самые сложные трассы. В наших рядах призеры мировых чемпионатов и они готовы поделиться своим ценным опытом, чтобы каждый урок стал вашей личной победой</p>
+        <a href="instruktori.html" class="team__btn">Выбрать инструктора</a>
       </div>
     </section>
 
     <section class="network">
       <h2 class="network__title">Сообщество</h2>
-      <div class="network-list">
-        <p>ICE ACE - не только школа, а целое комьюнити вдохновленных снегом и горами людей, мы без ума от сноуборда и горных лыж и часто делимсяважными событиями в социальных сетях, следите за нами на канале Youtube и в Instagram или приходи к нам, мы все расскажем.</p>
+      <div class="network__list">
+        <p class="network__text">ICE ACE - не только школа, а целое комьюнити вдохновленных снегом и горами людей, мы без ума от сноуборда и горных лыж и часто делимсяважными событиями в социальных сетях, следите за нами на канале Youtube и в Instagram или приходи к нам, мы все расскажем.</p>
 
         <!--КАРТА!!!!!!!!!!!!!!!!!!!!!!!!-->
 
@@ -167,24 +165,24 @@
     </section>
 
     <section class="community">
-      <h2 class="community__title">#ice_ace_community</h2>
-      <div class="community-list">
-        <div class="community-item">
+      <a href="#" class="community__title">#ice_ace_community</a>
+      <div class="community__list">
+        <div class="community__item">
           <img src="#" alt="лыжи1" class="community__img1">
         </div>
-        <div class="community-item">
+        <div class="community__item">
           <img src="#" alt="лыжи2" class="community__img2">
         </div>
-        <div class="community-item">
+        <div class="community__item">
           <img src="#" alt="лыжи3" class="community__img3">
         </div>
-        <div class="community-item">
+        <div class="community__item">
           <img src="#" alt="лыжи4" class="community__img4">
         </div>
-        <div class="community-item">
+        <div class="community__item">
           <img src="#" alt="лыжи5" class="community__img5">
         </div>
-        <div class="community-item">
+        <div class="community__item">
           <img src="#" alt="лыжи6" class="community__img6">
         </div>
       </div>
@@ -192,51 +190,49 @@
 
   </main>
 
-  <footer>
-    <div class="footer-background">
-      <div class="container">
-        <a href="#" class="logo">
-          <img src="#" alt="logo" class="logo-img">
-        </a>
-        <div class="socials">
-          <ul class="socials-list">
-            <li class="socials__item">
-              <a href="#" class="socials__link">Иконка ВК</a>
-            </li>
-            <li class="socials__item">
-              <a href="#" class="socials__link">Иконка Youtube</a>
-            </li>
-            <li class="socials__item">
-              <a href="#" class="socials__link">Иконка Insta</a>
-            </li>
-            <li class="socials__item">
-              <a href="#" class="socials__link">Иконка Face</a>
-            </li>
-          </ul>
-        </div>
-        <div class="contacts">
-          <a href="tel:+78008008080" class="contacts__phone">8(800)800-80-80</a>
-          <a href="mailto" class="mail">hello@iceace.com</a>
-        </div>
-        <div class="copyright">
-          <p>&copy "ICE ACE" - школа сноуборда и горных лыж. Все права защищены</p>
-        </div>
-        <div class="footer-nav">
-          <ul class="footer-nav-list">
-            <li class="footer-nav__item">
-              <a href="raspisanie.html" class="footer-nav__link">Расписание</a>
-            </li>
-            <li class="footer-nav__item">
-              <a href="instruktori.html" class="footer-nav__link">Инструкторы</a>
-            </li>
-            <li class="footer-nav__item">
-              <a href="#" class="footer-nav__link">Стоимость</a>
-            </li>
-            <li class="footer-nav__item">
-              <a href="#" class="footer-nav__link">Как добраться</a>
-            </li>
-          </ul>
-        </div>
+  <footer class="footer-container">
+    <div class="container">
+      <a href="#" class="footer-logo">
+        <img src="#" alt="logo" class="footer-logo__img">
+      </a>
+      <div class="socials">
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a href="#" class="socials__link">Иконка ВК</a>
+          </li>
+          <li class="socials__item">
+            <a href="#" class="socials__link">Иконка Youtube</a>
+          </li>
+          <li class="socials__item">
+            <a href="#" class="socials__link">Иконка Insta</a>
+          </li>
+          <li class="socials__item">
+            <a href="#" class="socials__link">Иконка Face</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-contacts">
+        <a href="tel:+78008008080" class="footer-contacts__phone">8(800)800-80-80</a>
+        <a href="mailto" class="mail">hello@iceace.com</a>
+      </div>
+      <div class="copyright">
+        <p>&copy "ICE ACE" - школа сноуборда и горных лыж. Все права защищены</p>
+      </div>
+      <div class="footer-nav">
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item">
+            <a href="raspisanie.html" class="footer-nav__link">Расписание</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="instruktori.html" class="footer-nav__link">Инструкторы</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__link">Стоимость</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__link">Как добраться</a>
+          </li>
+        </ul>
       </div>
     </div>
   </footer>

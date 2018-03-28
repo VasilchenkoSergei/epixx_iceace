@@ -8,13 +8,13 @@
 </head>
 <body>
 
-  <header class="page-headline">
+  <header class="page-header">
     <div class="container">
       <a href="index.html" class="logo">
         <img src="#" alt="logo" class="logo-img">
       </a>
       <nav class="main-nav">
-        <ul class="main-nav-list">
+        <ul class="main-nav__list">
           <li class="main-nav__item">
             <a href="raspisanie.html" class="main-nav__link">Расписание</a>
           </li>
@@ -31,7 +31,7 @@
       </nav>
       <div class="contacts">
         <a href="tel:+78008008080" class="contacts__phone">8(800)800-80-80</a>
-        <a href="#" class="btn">Записаться</a>
+        <a href="#" class="contacts__btn">Записаться</a>
       </div>
     </div>
   </header>
@@ -39,10 +39,12 @@
   <main>
     <section class="search-form">
       <div class="container">
-        <h2 class="search-form__title">Инструкторы школы</h2>
+        <h1 class="search-form__title">Инструкторы школы</h1>
         <form action="#">
           <input type="text" placeholder="Начните вводить имя" class="search-form__input">
-          <!--ИКОНКА ЛУПЫ-->
+          <button type="submit" class="search-form__btn">
+            <img src="#" alt="лупа" class="search-form__img">
+          </button>
         </form>
       </div>
     </section>
@@ -52,32 +54,29 @@
         <ul class="coach-photos__list">
           <li class="coach-photos__item">
             <a href="#" class="coach-photos__link">
-
-              <!-- Картинки загонять в div. А тега ссылки достаточно?-->
-
-              <img src="#" alt="Фото инструктора1">
+              <img src="#" alt="Фото инструктора1" class="coach-photos__img">
             </a>
             <span class="coach-photos__name">Арсений Петров</span>
           </li>
           <li class="coach-photos__item">
             <a href="#" class="coach-photos__link">
-              <img src="#" alt="Фото инструктора2">
+              <img src="#" alt="Фото инструктора2" class="coach-photos__img">
             </a>
           </li>
           <li class="coach-photos__item">
             <a href="#" class="coach-photos__link">
-              <img src="#" alt="Фото инструктора3">
+              <img src="#" alt="Фото инструктора3" class="coach-photos__img">
             </a>
             <span class="coach-photos__name">Степан Александров</span>
           </li>
           <li class="coach-photos__item">
             <a href="#" class="coach-photos__link coach-photos__link_active">
-              <img src="#" alt="Фото инструктора4">
+              <img src="#" alt="Фото инструктора4" class="coach-photos__img">
             </a>
           </li>
           <li class="coach-photos__item">
             <a href="#" class="coach_photos__link">
-              <img src="#" alt="Фото инструктора5">
+              <img src="#" alt="Фото инструктора5" class="coach-photos__img">
             </a>
             <span class="coach-photos__name">Виталий Сергеев</span>
           </li>
@@ -85,62 +84,71 @@
       </div>
     </section>
 
+
+
     <section class="coach-card">
-      <div class="container-coach">
-        <header class="coach-card-headline">
+      <!-- все вместе это одна карточка инструктора и это артикле с заголовком, блекджеком и верстальщицами -->
+      <div class="coach-container">
+        <article class="coach-card__header">
           <div class="coach-card__photo">
-            <img src="#" alt="фото инструктора4">
+            <img src="#" alt="фото инструктора4" class="coach-card__photo-wrap">
           </div>
           <h1 class="coach-card__subject">Константин Константинопольский</h1>
           <ul class="coach-card__list">
-            <li class="coach-card__item">
-              <h4>Спорт</h4>
+            <li class="coach-item">
+              <span class="coach-item__title">Спорт</span>
 
               <!--ИКОНКА!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
             </li>
-            <li class="coach-card__item">
-              <h4>Стаж катания</h4>
-              <span>7 лет</span>
+            <li class="coach-item">
+              <span class="coach-item__title">Стаж катания</span>
+              <p class="coach-item__text">7 лет</p>
             </li>
-            <li class="coach-card__item">
-              <h4>Стиль</h4>
-              <span>
-                #allround <br>
-                #freeride <br>
-                #skicross
-              </span>
+            <li class="coach-item">
+              <span class="coach-item__title">Стиль</span>
+              <p class="coach-item__text">
+                <a href="#" class="coach-item__link">#allround</a><br>
+                <a href="#" class="coach-item__link">#freeride</a><br>
+                <a href="#" class="coach-item__link">#skicross</a>
+              </p>
             </li>
           </ul>
-          <a href="#" class="btn">Записаться</a>
-          <button class=""></button>
+          <a href="#" class="coach__btn">Записаться</a>
+          <button class="">
+            <!-- иконка молнии -->
+            <span class="coach__score">5</span>
+          </button>
 
           <!-- Как правильно фоормить кнопку спасибо? Я так понимаю это кнопка, нажав на которую число растет... "Спасибо!" оформить спаном?-->
+          <!-- Думаю так сойдет -->
 
-        </header>
+        </article>
         <article class="coach-promo">
-          <div class="coach-promo__text">
-            <h4>Образование</h4>
-            <p>Национальная лига инструкторво, сертификат инструктора по горным лыжам, г. Санкт-Петербург (2014 год).</p>
-            <p>Занимается горными лыжами с 2002 года.<br>
+          <div class="coach-promo__block">
+            <h2 class="coach-promo__title">Образование</h2>
+            <!-- а третий уровень где? -->
+            <p class="coach-promo__text">Национальная лига инструкторво, сертификат инструктора по горным лыжам, г. Санкт-Петербург (2014 год).</p>
+            <p class="coach-promo__text">Занимается горными лыжами с 2002 года.<br>
                Первый взрослый разряд по горным лыжам - в 2010 г.<br>
                Опыт тренерской работы с 2012 года.
             </p>
-            <p>3 место на чемпионате Ленинградской области по горным лыжам.<br>
+            <p class="coach-promo__text">3 место на чемпионате Ленинградской области по горным лыжам.<br>
                1 место на чемпионате Карелии по горным лыжам.
             </p>
           </div>
           <div class="coach-promo__video">
             <video src="#" alt="видео инструктора4"></video>
+            <!-- iframe с ютуб -->
           </div>
         </article>
-        <footer class="coach-reviews">
+        <article class="coach-reviews">
           <div class="coach-reviews__item">
             <h4 class="coach-reviews__user">Марина Ильина</h4>
             <a href="#" class="coach-reviews__link">Иконка VK</a>
             <p class="coach-reviews__text">Костя - отличный тренер! Провела с ним всего одно занятие, чего, в принципе, мне и было достаточно. Я и раньше занималась горными лыжами, и мне нужно было вспомнить и наверстать упущенное. Инструктор очень пунктальный, вежливый и тактичный. Цели я своей добилась, он помог мне вновь встать на лыжи и закрепить свои навыки даже за одно занятие.</p>
           </div>
-        </footer>
+        </article>
       </div>
     </section>
 
@@ -149,31 +157,31 @@
         <ul class="coach-photos__list">
           <li class="coach-photos__item">
             <a href="#" class="coach-photos__link">
-              <img src="#" alt="Фото инструктора1">
+              <img src="#" alt="Фото инструктора1" class="coach-photos__img">
             </a>
             <span class="coach-photos__name">Иван Артемов</span>
           </li>
           <li class="coach-photos__item">
             <a href="#" class="coach_photos__link">
-              <img src="#" alt="Фото инструктора2">
+              <img src="#" alt="Фото инструктора2" class="coach-photos__img">
             </a>
             <span class="coach-photos__name">Петр Иванов</span>
           </li>
           <li class="coach-photos__item">
             <a href="#" class="coach_photos__link">
-              <img src="#" alt="Фото инструктора3">
+              <img src="#" alt="Фото инструктора3" class="coach-photos__img">
             </a>
             <span class="coach-photos__name">Андрей Степанов</span>
           </li>
           <li class="coach-photos__item">
             <a href="#" class="coach-photos__link coach-photos__link_active">
-              <img src="#" alt="Фото инструктора4">
+              <img src="#" alt="Фото инструктора4" class="coach-photos__img">
             </a>
             <span class="coach-photos__name">Данила Алексеев</span>
           </li>
           <li class="coach-photos__item">
             <a href="#" class="coach-photos__link">
-              <img src="#" alt="Фото инструктора5">
+              <img src="#" alt="Фото инструктора5" class="coach-photos__img">
             </a>
             <span class="coach-photos__name">Дмитрий Егоров</span>
           </li>
@@ -183,13 +191,13 @@
   </main>
 
   <footer>
-    <div class="footer-background">
+    <div class="footer-container">
       <div class="container">
         <a href="#" class="logo">
           <img src="#" alt="logo" class="logo-img">
         </a>
         <div class="socials">
-          <ul class="socials-list">
+          <ul class="socials__list">
             <li class="socials__item">
               <a href="#" class="socials__link">Иконка ВК</a>
             </li>
@@ -206,13 +214,13 @@
         </div>
         <div class="contacts">
           <a href="tel:+78008008080" class="contacts__phone">8(800)800-80-80</a>
-          <a href="mailto" class="mail">hello@iceace.com</a>
+          <a href="mailto" class="contacts__mail">hello@iceace.com</a>
         </div>
         <div class="copyright">
           <p>&copy "ICE ACE" - школа сноуборда и горных лыж. Все права защищены</p>
         </div>
         <div class="footer-nav">
-          <ul class="footer-nav-list">
+          <ul class="footer-nav__list">
             <li class="footer-nav__item">
               <a href="raspisanie.html" class="footer-nav__link">Расписание</a>
             </li>
