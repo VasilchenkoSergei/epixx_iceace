@@ -12,6 +12,7 @@ node_modules/
 *.sublime-*
 *.rar
 *.zip
+*.psd
 .idea
 .publish
 ex_files
