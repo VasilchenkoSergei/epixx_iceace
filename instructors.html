@@ -2,24 +2,35 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ICE ACE Школа сноуборда</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
+<body>
+  <div class="promo__container container">
+    <a href="index.html" class="promo__logo">
+      <img src="images/index/logo--black.png" class="promo__img" width="70" height="26">
+    </a>
+    <div class="promo__burger"></div>
+  </div>
   <header class="page-header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="#" alt="logo" class="logo-img">
+    <div class="page-header__container container">
+      <a href="index.html" class="page-header__logo  logo">
+        <img src="images/index/logo--nav.png" class="promo__img">
       </a>
-      <nav class="main-nav">
+      <a href="index.html" class="page-header__logo-desktop  logo">
+        <img src="images/index/logo--black.png" class="promo__img">
+      </a>
+      <div class="promo__burger"></div>
+      <nav class="page-header__main-nav  main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="raspisanie.html" class="main-nav__link">Расписание</a>
+            <a href="schedule.html" class="main-nav__link">Расписание</a>
           </li>
           <li class="main-nav__item">
-            <a href="instruktori.html" class="main-nav__link main-nav__link_active">Инструкторы</a>
+            <a href="instructors.html" class="main-nav__link">Инструкторы</a>
           </li>
           <li class="main-nav__item">
             <a href="#" class="main-nav__link">Стоимость</a>
@@ -29,20 +40,38 @@
           </li>
         </ul>
       </nav>
-      <div class="contacts">
+      <div class="page-header__socials  socials">
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a href="#" class="socials__link  socials__link--youtube"></a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link  socials__link--instagram"></a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link  socials__link--facebook"></a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link  socials__link--vkontakte"></a>
+            </li>
+          </ul>
+        </div>
+      <div class="page-header__contacts  contacts">
         <a href="tel:+78008008080" class="contacts__phone">8(800)800-80-80</a>
-        <a href="#" class="contacts__btn">Записаться</a>
+        <a href="mailto:hello@iceace.com" class="contacts__mail">hello@iceace.com</a>
       </div>
+      <a href="#" class="page-header__btn  btn">Записаться</a>
     </div>
   </header>
 
   <main>
 
-    <h1 class="page-title">Инструкторы школы</h1>
-    <section class="search-form">
-      <div class="search-form__container  container">
-        <form action="#">
-          <input type="text" placeholder="   Начните вводить имя" class="search-form__input">
+    
+    <section class="search">
+      <h1 class="search__page-title">Инструкторы школы</h1>
+      <div class="search__container  container">
+        <form action="#" class="search-form">
+          <input type="search" placeholder="   Начните вводить имя" class="search-form__input">
           <button type="submit" class="search-form__submit"></button>
         </form>
       </div>
@@ -54,30 +83,32 @@
           <li class="coach-photos__item">
             <a href="#" class="coach-photos__link">
               <img src="images/instructors/instructor1.jpg" alt="Фото инструктора1" class="coach-photos__img">
-              <span class="coach-photos__name">Арсений Петров</span>
             </a>
+            <span class="coach-photos__name">Арсений<br>Петров</span>
           </li>
           <li class="coach-photos__item">
             <a href="#" class="coach-photos__link">
               <img src="images/instructors/instructor2.jpg" alt="Фото инструктора2" class="coach-photos__img">
             </a>
+            <span class="coach-photos__name">Сергей<br>Петров</span>
           </li>
           <li class="coach-photos__item">
             <a href="#" class="coach-photos__link">
               <img src="images/instructors/instructor3.jpg" alt="Фото инструктора3" class="coach-photos__img">
             </a>
-            <span class="coach-photos__name">Степан Александров</span>
+            <span class="coach-photos__name">Степан<br>Александров</span>
           </li>
           <li class="coach-photos__item">
             <a href="#" class="coach-photos__link coach-photos__link_active">
               <img src="images/instructors/instructor4.jpg" alt="Фото инструктора4" class="coach-photos__img">
             </a>
+            <span class="coach-photos__name">Константин<br>Константинопольский</span>
           </li>
           <li class="coach-photos__item">
-            <a href="#" class="coach_photos__link">
+            <a href="#" class="coach-photos__link">
               <img src="images/instructors/instructor5.jpg" alt="Фото инструктора5" class="coach-photos__img">
             </a>
-            <span class="coach-photos__name">Виталий Сергеев</span>
+            <span class="coach-photos__name">Виталий<br>Сергеев</span>
           </li>
         </ul>
       </div>
@@ -86,23 +117,26 @@
 
 
     <section class="coach">
-      <div class="coach__container  container">
+      <div class="coach__container container">
 
         <article class="coach-card">
           <div class="coach-card__photo-wrap">
             <img src="images/instructors/instructor4_article.jpg" alt="фото инструктора4" class="coach-card__photo">
+            <a href="#" class="coach-card__photo-btn  btn">Записаться</a>
+            <h2 class="coach-card__photo-subject">Константин<br>Константинопольский</h2>
           </div>
-
+          
           <div class="coach-card__skills-block">
             <h2 class="coach-card__skills-subject">Константин Константинопольский</h2>
             <ul class="coach-card__skills-list">
               <li class="coach-card__skills-item">
                 <span class="coach-card__skills-title">Спорт</span>
+                <span class="coach-card__skills-text">Лыжи</span>
                 <div class="coach-card__skills-icon"></div>
               </li>
-              <li class="coach-card__skills-item">
-                <span class="coach-card__skills-title">Стаж катания</span>
-                <p class="coach-card__skills-text">7 лет</p>
+              <li class="coach-card__skills-item coach-card__skills-item--1">
+                <span class="coach-card__skills-title">Стаж</span>
+                <span class="coach-card__skills-text">7 лет</span>
               </li>
               <li class="coach-card__skills-item">
                 <span class="coach-card__skills-title">Стиль</span>
@@ -114,8 +148,8 @@
               </li>
             </ul>
           </div>
+          <a href="#" class="coach-card__btn  btn">Записаться</a>
           <div class="coach-card__btn-block">
-            <a href="#" class="coach-card__btn  btn">Записаться</a>
             <button class="coach-card__score-btn">
               <span class="coach-card__score">5</span>
             </button>
@@ -134,11 +168,12 @@
             </p>
           </div>
           <div class="coach-card__video">
-            <iframe src="https://www.youtube.com/watch?v=FQjwNTcqiAc" frameborder="0"></iframe>
+            <iframe src="https://www.youtube.com/embed/N2CWCJJilfk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </article>
 
         <article class="coach-reviews">
+          <h3 class="coach-review__title">Отзывы</h3>
           <div class="coach-reviews__item">
             <h4 class="coach-reviews__user">Марина Ильина</h4>
             <a href="#" class="coach-reviews__link"></a>
@@ -146,40 +181,41 @@
           </div>
         </article>
       </div>
+      <a href="#" class="coach-reviews__btn  btn">Записаться</a>
     </section>
 
-    <section class="coach-photos">
+    <section class="coach-photos coach-photos__second">
       <div class="container">
         <ul class="coach-photos__list">
           <li class="coach-photos__item">
             <a href="#" class="coach-photos__link">
               <img src="images/instructors/instructor6.jpg" alt="Фото инструктора6" class="coach-photos__img">
             </a>
-            <span class="coach-photos__name">Иван Артемов</span>
+            <span class="coach-photos__name">Иван<br>Артемов</span>
           </li>
           <li class="coach-photos__item">
-            <a href="#" class="coach_photos__link">
+            <a href="#" class="coach-photos__link">
               <img src="images/instructors/instructor7.jpg" alt="Фото инструктора7" class="coach-photos__img">
             </a>
-            <span class="coach-photos__name">Петр Иванов</span>
+            <span class="coach-photos__name">Петр<br>Иванов</span>
           </li>
           <li class="coach-photos__item">
-            <a href="#" class="coach_photos__link">
+            <a href="#" class="coach-photos__link">
               <img src="images/instructors/instructor8.jpg" alt="Фото инструктора8" class="coach-photos__img">
             </a>
-            <span class="coach-photos__name">Андрей Степанов</span>
+            <span class="coach-photos__name">Андрей<br>Степанов</span>
           </li>
           <li class="coach-photos__item">
             <a href="#" class="coach-photos__link coach-photos__link_active">
               <img src="images/instructors/instructor9.jpg" alt="Фото инструктора9" class="coach-photos__img">
             </a>
-            <span class="coach-photos__name">Данила Алексеев</span>
+            <span class="coach-photos__name">Данила<br>Алексеев</span>
           </li>
           <li class="coach-photos__item">
             <a href="#" class="coach-photos__link">
               <img src="images/instructors/instructor10.jpg" alt="Фото инструктора10" class="coach-photos__img">
             </a>
-            <span class="coach-photos__name">Дмитрий Егоров</span>
+            <span class="coach-photos__name">Дмитрий<br>Егоров</span>
           </li>
         </ul>
       </div>
@@ -188,47 +224,52 @@
 
   <footer class="page-footer">
     <div class="page-footer__container  container">
-      <div class="page-footer__logo logo">
-        <img src="#" alt="logo" class="logo__img">
+      <div class="page-footer__block">
+        <div class="page-footer__logo logo">
+          <a href="index.html">
+            <img src="images/index/logo--black.png" class="promo__img" width="65" height="24">
+          </a>
+        </div>
+        <div class="page-footer__socials  socials">
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a href="#" class="socials__link  socials__link--youtube"></a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link  socials__link--instagram"></a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link  socials__link--facebook"></a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link  socials__link--vkontakte"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__contacts  contacts">
+          <a href="tel:+78008008080" class="contacts__phone">8(800)800-80-80</a>
+          <a href="mailto:hello@iceace.com" class="contacts__mail">hello@iceace.com</a>
+        </div>
       </div>
-      <div class="page-footer__socials  socials">
-        <ul class="socials__list">
-          <li class="socials__item">
-            <a href="#" class="socials__link">Иконка ВК</a>
-          </li>
-          <li class="socials__item">
-            <a href="#" class="socials__link">Иконка Youtube</a>
-          </li>
-          <li class="socials__item">
-            <a href="#" class="socials__link">Иконка Insta</a>
-          </li>
-          <li class="socials__item">
-            <a href="#" class="socials__link">Иконка Face</a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__contacts  contacts">
-        <a href="tel:+78008008080" class="contacts__phone">8(800)800-80-80</a>
-        <a href="mailto:hello@iceace.com" class="contacts__mail">hello@iceace.com</a>
-      </div>
+      <div class="page-footer__block">
+        <p class="page-footer__copyright">&copy  2017 "ICE ACE" - школа сноуборда и горных лыж. Все права защищены</p>
 
-      <p class="page-footer__copyright">&copy "ICE ACE" - школа сноуборда и горных лыж. Все права защищены</p>
-
-      <div class="page-footer__nav  nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#" class="nav__link">Расписание</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Инструкторы</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Стоимость</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Как добраться</a>
-          </li>
-        </ul>
+        <div class="page-footer__nav  nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="schedule.html" class="nav__link">Расписание</a>
+            </li>
+            <li class="nav__item">
+              <a href="instructors.html" class="nav__link">Инструкторы</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Стоимость</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Как добраться</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </footer>

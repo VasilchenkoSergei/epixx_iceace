@@ -2,24 +2,34 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ICE ACE Школа сноуборда</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+  <div class="promo__container container">
+    <a href="index.html" class="promo__logo">
+      <img src="images/index/logo--black.png" class="promo__img" width="70" height="26">
+    </a>
+    <div class="promo__burger"></div>
+  </div>
   <header class="page-header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="#" alt="logo" class="logo-img">
+    <div class="page-header__container container">
+      <a href="index.html" class="page-header__logo  logo">
+        <img src="images/index/logo--nav.png" class="promo__img">
       </a>
-      <nav class="main-nav">
+      <a href="index.html" class="page-header__logo-desktop  logo">
+        <img src="images/index/logo--black.png" class="promo__img">
+      </a>
+      <div class="promo__burger"></div>
+      <nav class="page-header__main-nav  main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="raspisanie.html" class="main-nav__link main-nav__link_active">Расписание</a>
+            <a href="schedule.html" class="main-nav__link">Расписание</a>
           </li>
           <li class="main-nav__item">
-            <a href="instruktori.html" class="main-nav__link">Инструкторы</a>
+            <a href="instructors.html" class="main-nav__link">Инструкторы</a>
           </li>
           <li class="main-nav__item">
             <a href="#" class="main-nav__link">Стоимость</a>
@@ -29,17 +39,72 @@
           </li>
         </ul>
       </nav>
-      <div class="contacts">
+      <div class="page-header__socials  socials">
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a href="#" class="socials__link  socials__link--youtube"></a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link  socials__link--instagram"></a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link  socials__link--facebook"></a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link  socials__link--vkontakte"></a>
+            </li>
+          </ul>
+        </div>
+      <div class="page-header__contacts  contacts">
         <a href="tel:+78008008080" class="contacts__phone">8(800)800-80-80</a>
-        <a href="#" class="contacts__btn">Записаться</a>
+        <a href="mailto:hello@iceace.com" class="contacts__mail">hello@iceace.com</a>
       </div>
+      <a href="#" class="page-header__btn  btn">Записаться</a>
     </div>
   </header>
-
   <main>
     <h1 class="page-title">Выбрать программу</h1>
     <section class="program-choice">
       <div class="program-choice__container  container">
+
+        <div class="program-form">
+          <form action="#">
+            <label class="program-form__label">Спорт</label>
+            <select class="program-form__select" name="Sport">
+              <option value="">Выберите вид спорта</option>
+              <option value="">Сноуборд</option>
+              <option value="">Лыжи</option>
+            </select>
+            <label class="program-form__label">Инструктор</label>
+            <select class="program-form__select" name="Instructor">
+              <option value="">Выберите инструктора</option>
+              <option value="">Константин Константинопольский</option>
+              <option value="">Степан Александров</option>
+              <option value="">Виталий Сергеев</option>
+              <option value="">Арсений Петров</option>
+            </select>
+            <label class="program-form__label">Дата</label>
+            <div class="program-form__select-wrap">
+              <input class="program-form__select" type="date" name="date">
+              <div class="program-form__select-date"></div>
+            </div>
+            
+            <label class="program-form__label">Время</label>
+            <select class="program-form__select" name="Time">
+              <option value="">12.00</option>
+              <option value="">13.00</option>
+              <option value="">14.00</option>
+            </select>
+            <label class="program-form__label">Стоимость</label>
+            <select class="program-form__select" name="Price">
+              <option value="">Выберите стоимость</option>
+              <option value="">2000 р</option>
+              <option value="">3000 р</option>
+              <option value="">4000 р</option>
+            </select>
+          </form>
+          <a href="#" class="program-form__btn  btn">Записаться</a>
+        </div>
 
         <table border="0" cellpadding="10" class="program-choice__table  choice-table">
           <tr>
@@ -111,7 +176,7 @@
             <a href="#" class="instr-card__link">Узнать больше</a>
           </div>
           <div class="instr-card__price-block">
-            <span class="instr-card__price">2 000 <!--ИКОНКА РУБЛЯ!!!!!!!!!!!!!!!!!!!! --></span>
+            <span class="instr-card__price">2 000 р</span>
             <a href="#" class="instr-card__btn  btn">Купить</a>
           </div>
         </article>
@@ -149,13 +214,13 @@
         <h2 class="form__title">Заказать обратный звонок</h2>
         <form action="#">
           <label class="form__label">*Имя</label>
-          <input class="form__input" type="text" name="Name">
+          <input class="form__input" type="text" name="Name" placeholder=" Введите ваше имя">
           <label class="form__label">*Фамилия</label>
-          <input class="form__input" type="text" name="Surname">
+          <input class="form__input" type="text" name="Surname" placeholder=" Введите вашу фамилию">
           <label class="form__label">*Телефон</label>
-          <input class="form__input" type="tel" name="Cell-phone">
+          <input class="form__input" type="tel" name="Cell-phone" placeholder=" 8 (999) 999-99-99">
           <label class="form__label">Ваше сообщение</label>
-          <textarea class="form__textarea" type="text" name="Your message"></textarea>
+          <textarea class="form__textarea" type="text" name="Your message" placeholder=" Оставьте свой комментарий по желанию"></textarea>
           <button type="text" class="form__submit  btn">Отправить</button>
         </form>
       </div>
@@ -164,47 +229,52 @@
 
   <footer class="page-footer">
     <div class="page-footer__container  container">
-      <div class="page-footer__logo logo">
-        <img src="#" alt="logo" class="logo__img">
+      <div class="page-footer__block">
+        <div class="page-footer__logo logo">
+          <a href="index.html">
+            <img src="images/index/logo--black.png" class="promo__img" width="65" height="24">
+          </a>
+        </div>
+        <div class="page-footer__socials  socials">
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a href="#" class="socials__link  socials__link--youtube"></a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link  socials__link--instagram"></a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link  socials__link--facebook"></a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link  socials__link--vkontakte"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__contacts  contacts">
+          <a href="tel:+78008008080" class="contacts__phone">8(800)800-80-80</a>
+          <a href="mailto:hello@iceace.com" class="contacts__mail">hello@iceace.com</a>
+        </div>
       </div>
-      <div class="page-footer__socials  socials">
-        <ul class="socials__list">
-          <li class="socials__item">
-            <a href="#" class="socials__link">Иконка ВК</a>
-          </li>
-          <li class="socials__item">
-            <a href="#" class="socials__link">Иконка Youtube</a>
-          </li>
-          <li class="socials__item">
-            <a href="#" class="socials__link">Иконка Insta</a>
-          </li>
-          <li class="socials__item">
-            <a href="#" class="socials__link">Иконка Face</a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__contacts  contacts">
-        <a href="tel:+78008008080" class="contacts__phone">8(800)800-80-80</a>
-        <a href="mailto:hello@iceace.com" class="contacts__mail">hello@iceace.com</a>
-      </div>
+      <div class="page-footer__block">
+        <p class="page-footer__copyright">&copy  2017 "ICE ACE" - школа сноуборда и горных лыж. Все права защищены</p>
 
-      <p class="page-footer__copyright">&copy "ICE ACE" - школа сноуборда и горных лыж. Все права защищены</p>
-
-      <div class="page-footer__nav  nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#" class="nav__link">Расписание</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Инструкторы</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Стоимость</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Как добраться</a>
-          </li>
-        </ul>
+        <div class="page-footer__nav  nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="schedule.html" class="nav__link">Расписание</a>
+            </li>
+            <li class="nav__item">
+              <a href="instructors.html" class="nav__link">Инструкторы</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Стоимость</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Как добраться</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </footer>

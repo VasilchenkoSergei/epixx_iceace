@@ -1,128 +1,105 @@
 @font-face {
   font-family: "Futura PT";
-  src:  url("../fonts/Futura-Normal.woff2") format("woff2");
-        url("../fonts/Futura-Normal.woff") format("woff");
-        url("../fonts/Futura-Normal.ttf") format("ttf");
+  src:  url("../fonts/Futura PT/Futura-Normal.woff2") format("woff2");
+        url("../fonts/Futura PT/Futura-Normal.woff") format("woff");
+        url("../fonts/Futura PT/Futura-Normal.ttf") format("ttf");
         font-style: normal;
 }
 
 @font-face {
   font-family: "Futura PT";
-  src:  url("../fonts/Futura-Bold.woff2") format("woff2");
-        url("../fonts/Futura-Bold.woff") format("woff");
-        url("../fonts/Futura-Bold.ttf") format("ttf");
+  src:  url("../fonts/Futura PT/Futura-Bold.woff2") format("woff2");
+        url("../fonts/Futura PT/Futura-Bold.woff") format("woff");
+        url("../fonts/Futura PT/Futura-Bold.ttf") format("ttf");
         font-weight: bold;
 }
+
+@font-face {
+  font-family: "PT Sans";
+  src:  url("../fonts/PT Sans/PTSans-Normal.woff2") format("woff2");
+        url("../fonts/PT Sans/PTSans-Normal.woff") format("woff");
+        url("../fonts/PT Sans/PTSans-Normal.ttf") format("ttf");
+        font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src:  url("../fonts/PT Sans/PTSans-Bold.woff2") format("woff2");
+        url("../fonts/PT Sans/PTSans-Bold.woff") format("woff");
+        url("../fonts/PT Sans/PTSans-Bold.ttf") format("ttf");
+        font-weight: bold;
+}
+
+
 body {
   font-family: "Futura PT", sans-serif;
   font-size: 15px;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
 }
 
 .container {
-  width: 1160px;
-  height: 100%;
+/*  width: 92%;*/
   margin: 0 auto;
-  border: 2px solid green;
+  width: calc(100% - 20px);
 }
 
 .promo {
-  background: url(../images/index/header-bg.jpg) no-repeat center;
-  width: 100%;
-  height: 645px;
-
+  background-image: url(../images/index/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: -400px;
+  background-size: cover;
+  height: 475px;
 }
+
+.promo__container {
+  position: relative;
+  padding-top: 10px;
+}
+
+.promo__logo {
+  width: 70px;
+  height: 26px;
+  top: 15px;
+}
+
+.promo__burger {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  border: 1px solid green;
+  top: 10px;
+  right: 0;
+}
+
+
 .promo__title {
-  width: 550px;
-  margin-top: 105px;
+  width: 220px;
+  margin-top: 130px;
   color: #fff;
-  font-size: 50px;
+  font-size: 24px;
   font-weight: 800;
 }
 
 .promo__title span {
   color: #fff;
-  font-size: 38px;
+  font-size: 18px;
   font-weight: 600;
-  line-height: 130px;
+  line-height: 13px;
 }
 
-.page-header {
-    text-align: center;
-
-}
-
-.page-header__container {
-
-}
-
-.page-header__logo {
-  width: 160px;
-  height: 50px;
-  border: 5px solid #000;
-  display: inline-block;
-  vertical-align: middle;
-
-}
-
-.logo__img {
-  display: block;
-  text-transform: uppercase;
-  font-size: 25px;
-  font-family: "Avenir Next", sans-serif;
-  font-weight: bold;
-  text-align: center;
-  line-height: 50px;
-}
-
-.page-header__main-nav {
-  display: inline-block;
-  vertical-align: middle;
-  border: 1px solid red;
-}
-
-.main-nav__list {
-  padding: 0;
-}
-
-.main-nav__item {
-  display: inline-block;
-  margin-left: 40px;
-  border: 2px solid red;
-}
-
-.main-nav__link {
-  text-decoration: none;
-  font-size: 15px;
-  color: #000;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.page-header__contacts {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.contacts {
-  
-}
-
-.contacts__phone {
-  text-decoration: none;
-  font-size: 22px;
-  color: #000;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 40px;
-  font-weight: bold;
-}
-
-.page-header__btn {
-  display: inline-block;
-  border: 3px solid #000;
-  color: #74e196;
-  vertical-align: middle;
-  margin-left: 35px;
+.promo__btn {
+  position: absolute;
+  border: 3px solid #74e196;
+  color: #fff;
+  top: 550px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .btn {
@@ -135,270 +112,327 @@ body {
   font-weight: bold;
   text-transform: uppercase;
 }
-/*!!!!!!!!!!!!!!!!!!!services!!!!!!!!!!!!!!!!!!!!*/
+
+.btn:hover {
+  background-color: #74e196;
+  color: #fff;
+}
+
+.page-header {
+ display: none; 
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  background-color: white;
+  top: 0;
+}
+
+.page-header__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+/*  position: relative;*/
+  
+}
+
+.page-header__logo {
+  width: 50px;
+  height: 20px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.page-header__logo-desktop {
+  display: none;
+}
+
+.page-header__main-nav {
+  width: 100%;
+  margin-top: 80px;
+}
+
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.main-nav__item {
+  list-style: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #74e196;
+  text-align: center;
+}
+
+.main-nav__link {
+  text-decoration: none;
+  font-size: 15px;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.contacts__phone {
+  text-decoration: none;
+  font-size: 22px;
+  color: #000;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.contacts__mail {
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.page-header__btn {
+  border: 2px solid #74e196;
+  color: #000;
+  margin-top: 33px;
+  margin-bottom: 33px;
+}
 
 .services__title {
-  font-size: 40px;
+  font-size: 24px;
   font-weight: bold;
   text-align: center;
+  margin-top: 12px;
 }
 
 .services__text {
-  font-size: 20px;
+  font-size: 10px;
   text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 .services__list {
-  overflow: hidden;
-  margin-left: -20px;
-  margin-right: -20px;
+
+/*  margin-left: -40px;
+  margin-right: -40px;*/
 }
 
-/*.services__container {
-  width: 1160px;
-  margin: 0 auto;
-}*/
-
 .services-item {
-width: 33.33%;
-float: left;
-box-sizing: border-box;
-border: 1px solid #000;
-padding-left: 20px;
-padding-right: 20px;
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  position: relative;
+  /*padding-left: 20px;*/
+  /*padding-right: 20px;*/
 }
 
 .services-item--horizontal {
-  width: 66.66%;
-  /*float: left;*/
-}
-
-
-.services-item--horizontal .services-item__img,
-.services-item--horizontal .services-item__info {
-  height: 240px;
   width: 50%;
-  float: left;
 }
-
-.services-item--horizontal .services-item__info {
-  padding-left: 20px;
-}
-
 
 .services-item__img {
-  height: 240px;
- /* width: 360px;*/
-  box-sizing: border-box;
-  border: 1px solid red;
+  height: 160px;
   overflow: hidden;
-  
+  border-right: 3px solid #fff;
+}
+.services-item__img-wrap {
+  /*width: 100%;*/
+  /*min-height: 1px;*/
+  height: 100%;
 }
 
+
+
+.services-item--horizontal .services-item__img {
+  height: 80px;
+  border-right: none;
+  border-bottom: 3px solid #fff;
+}
+.services-item--horizontal .services-item__img:last-child {
+  border-bottom: none;
+}
+.services-item--horizontal .services-item__img-wrap {
+  width: 100%;
+  height: auto;
+}
 .services-item__info {
-  height: 240px;
-  box-sizing: border-box;
-  float: left;
-  border: 1px solid red;
+
 }
 
-.services-item__footer {
-  border: 1px solid #000;
+
+.services-item__title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  position: absolute;
+  margin-left: 5px;
+  bottom: 10px;
+}
+
+.services-item__text {
+  display: none;
 }
 
 .services-item__meta {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 35px;
-  font-size: 20px;
+  display: none;
 }
 
 .services-item__link {
-  display: inline-block;
-  width: 45px;
-  height: 35px;
-  border: 1px solid #000;
-  /*vertical-align: middle;*/
-  float: right;
+  width: 35px;
+  height: 30px;
   background-image: url(../images/sprite_iceace.png);
-  background-position: -95px -185px;
+  background-position: -100px -185px;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
 }
 
-
-/* !!!!!!!!!!!!TRUST!!!!!!!!!!!!*/
-
 .trust {
-  text-align: center;
+ /* text-align: center;*/
 }
 
 .trust__title {
-  font-size: 40px;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 10px;
+  
 }
-
-/*.trust__container {
-  width: 1160px;
-  margin: 0 auto;
-}*/
-
 
 .trust__list {
-  margin-left: -20px;
-  margin-right: -20px;
-}
-
-.trust__list:after {
-  content: '';
-  display: block;
-  clear: both;
-  
+  display: flex;
+  flex-direction: column;
 }
 
 .trust-item {
-  float: left;
-  width: 33.33%;
+  display: flex;
+  width: 100%;
   box-sizing: border-box;
-  border: 1px solid #000;
-  padding: 0 20px;
-  
 }
 
-/*.trust__item:nth-child(4n+1) {
-  clear: left;
-} */
+.trust-item__icon {
+  width: 50px;
+  height: 60px;
+  background-image: url(../images/sprite_iceace.png);
+}
+
+.trust-item__icon--second {
+  background-position: -75px 0;
+}
+
+.trust-item__icon--third {
+  background-position: -157px 0;
+}
+
+.trust-item__icon--fourth {
+  background-position: 0 -90px;
+}
+
+.trust-item__icon--fifth {
+  background-position: -78px -90px;
+}
+
+.trust-item__icon--sixth {
+  background-position: -160px -90px;
+}
+
+.trust-item__block {
+  margin-left: 10px;
+  flex-shrink: 7;
+}
 
 .trust-item__title {
-  font-size: 20px;
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .trust-item__text {
   font-family: "PT Sans", sans-serif;
-  font-size: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 5px;
 }
-
-.trust-item__icon {
-  display: inline-block;
-  width: 82px;
-  height: 90px;
-  border: 1px solid #000;
-  background-image: url(../images/sprite_iceace.png);
-}
-
-.trust-item__icon--first {
-/*  background-image: url(../images/sprite_iceace.png);
-*/}
-
-.trust-item__icon--second {
-/*  background-image: url(../images/sprite_iceace.png);
-*/  background-position: -75px 0;
-}
-
-.trust-item__icon--third {
-/*  background-image: url(../images/sprite_iceace.png);
-*/  background-position: -157px 0;
-}
-
-.trust-item__icon--fourth {
-/*  background-image: url(../images/sprite_iceace.png);
-*/  background-position: 0 -90px;
-}
-
-.trust-item__icon--fifth {
-/*  background-image: url(../images/sprite_iceace.png);
-*/  background-position: -78px -90px;
-}
-
-.trust-item__icon--sixth {
-/*  background-image: url(../images/sprite_iceace.png);
-*/  background-position: -160px -90px;
-}
-
-
-
-
-
-/*!!!!!!!!!!!!!!!!!!!!!!SALE!!!!!!!!!!!!!!!!!!!
-*/
-
-
 
 .sale {
-  background: url(../images/index/sale-bg.jpg) no-repeat center;
+  background-image: url(../images/index/sale-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   color: #fff;
-  font-size: 0;
-}
-
-.sale__container {
-  padding-bottom: 40px
 }
 
 .sale__title {
-  font-size: 40px;
+  font-size: 24px;
   text-align: center;
+  margin: 0;
+  margin-bottom: 90px;
+  padding-top: 15px;
 }
 
+.sale__list {
+
+}
+
+
 .sale-item {
-  display: inline-block;
-  width: 33.33%;
+  width: 100%;
   text-align: center;
-  border: 1px solid red;
   box-sizing: border-box;
-  margin-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 140px;
+}
+
+.sale-item:nth-child(n+2) {
+  display: none;
 }
 
 .sale-item__title {
   font-size: 22px;
   text-align: center;
+  margin: 0;
 }
 
 .sale-item__text {
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
-  width: 60%;
-  border: 1px solid #000;
-  margin: 0 auto;
+  width: 75%;
+
+
 }
 
 .sale-item__text span {
   color: #74e196;
 }
 
-
 .sale__btn {
-  display: block;
-  border: 3px solid #fff;
-  color: #74e196;
-  margin: 0 auto;
+  display: none;
 }
 
-
-
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!TEAM!!!!!!!!!!!!!
-*/
 .team {
-  background: url(../images/index/team-bg.jpg) no-repeat center;
-  width: 100%;
-
+  background-image: url(../images/index/team-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .team__container {
   text-align: center;
-  height: 800px;
-  background: linear-gradient(to top, #fff 13%, rgba(225, 225, 225, 0.1) 50%);
+  height: 600px;
 }
 
 .team__title {
-  margin-top: 75px;
-  font-size: 40px;
+  margin: 0;
+  margin-top: 20px;
+  font-size: 24px;
 }
 
 .team__text {
-  font-family: "PT Sans", sans-serif;
-  font-size: 15px;
-  width: 760px;
-  margin: 0 auto;
-  margin-bottom: 65px;
-  margin-top: 450px;
+  display: none;
  }
 
 .team__btn {
@@ -407,89 +441,89 @@ padding-right: 20px;
   border: 3px solid #000;
   color: #74e196;
   margin: 0 auto;
+  margin-bottom: 50px;
 }
-
 
 .network__title {
   text-align: center;
-  font-size: 40px;
+  font-size: 24px;
 }
 
 .network__text {
-  width: 780px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+  width: 100%;
   text-align: center;
-  margin: 0 auto;
-  padding-bottom: 43px;
-}
-
-.community__container {
-  text-align: center;
-  border: 1px solid red;
+  margin-bottom: 20px;
+  font-size: 12px;
 }
 
 .community__title {
+  display: block;
   color: #000;
   text-decoration: none;
-  font-size: 40px;
+  font-size: 24px;
+  text-align: center;
 }
 
 .community__list {
-  text-align: center;
-  border: 1px solid #000;
+  display: flex;
+  overflow-x: scroll;
 }
 
 .community__item {
-  display: inline-block;
-  width: 187px;
-  height: 187px;
-  border: 1px solid #000;
+  width: 100%;
+  height: auto;
+  padding: 1px;
 }
 
-
-
-/*!!!!!!!!!!!!ФУТЕР!!!!!!!!!!!!!!!!!!!!
-*/
-
+.community__img {
+/* height: auto;*/
+}
 
 .page-footer {
-  background: url(../images/index/footer-bg.jpg) no-repeat center;
+  background-image: url(../images/index/footer-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   width: 100%;
-  height: 300px;
+}
+
+.page-footer__container {
+
 }
 
 .page-footer__block {
-  display: block;
-  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .page-footer__logo {
-  width: 160px;
-  height: 50px;
-  border: 5px solid #000;
-  display: inline-block;
-  vertical-align: middle;
+  margin-top: 30px;
 }
 
 .page-footer__socials {
-  display: inline-block;
-  border: 1px solid #000;
+  margin-top: 45px;
 }
 
 .socials__list {
   padding: 0;
-text-align: center;
-
+  margin: 0;
+  text-align: center;
 }
 
 .socials__item {
   display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 
 .socials__link {
   display: block;
   width: 45px;
   height: 35px;
-  border: 1px solid #000;
   background-image: url(../images/sprite_iceace.png);
 }
 
@@ -510,17 +544,1482 @@ text-align: center;
 }
 
 .page-footer__contacts {
-  display: inline-block;
-  border: 1px solid #000;
-  
+  margin-top: 55px;
 }
 
 .contacts__phone,
 .contacts__mail {
   display: block;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+}
+
+.contacts__phone {
+  font-size: 22px;
+}
+
+..contacts__mail {
+  font-size: 20px;
+}
+
+.page-footer__copyright {
+  font-size: 12px;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
+  margin-bottom: : 10px;
+}
+
+.page-footer__nav {
+display: none;
+}
+
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!ИНСТРУКТОРЫ!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+
+
+
+
+.search {
+  margin-top: 20px;
+}
+
+.search__page-title {
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+
+.search__container {
+  display: flex;
+  justify-content: center;
+}
+
+.search-form {
+  position: relative;
   
+}
+
+.search-form__input {
+  display: block;
+  width: 290px;
+  height: 32px;
+  border: 2px solid #000;
+  font-size: 15px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.search-form__submit {
+  position: absolute;
+  display: block;
+  background-image: url(../images/sprite_iceace.png);
+  background-position: -257px 41px;
+  width: 27px;
+  height: 25px;
+  border:none;
+  background-color: transparent;
+  top: 3px;
+  right: 10px;
+}
+
+.coach-photos__list {
+  display: flex;
+  padding: 0;
+  margin-top: 60px;
+  list-style: none;
+  overflow-x: scroll;
+}
+
+.coach-photos__item {
+  position: relative;
+  box-sizing: border-box;
+  width: 230px;
+  height: 230px;
+}
+
+.coach-photos__link:before {
+  content: '';
+  background-color: #000;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0.3;
+}
+
+/*.coach-photos__link:hover {
+  content: '';
+  background-color: #74e196;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 5;
+  opacity: 0.3;
+}*/
+
+.coach-photos__link {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 230px;
+  height: 230px;
+}
+
+.coach-photos__name {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.coach {
+
+}
+
+.coach-card {
+  padding-top: 40px;
+  position: relative;
+}
+
+.coach-card__photo-wrap {
+  position: relative;
+  width: 270px;
+  margin-left: 25px;
+  margin: 0 auto;
+}
+
+.coach-card__photo {
+  width: 100%;
+}
+
+.coach-card__photo-subject {
+  position: absolute;
+  color: #fff;
+  top: 140px;
+  left: 20px;
+}
+
+.coach-card__photo-btn {
+  position: absolute;
+  display: block;
+  border: 3px solid #74e196;
+  color: #fff;
+  top: 210px;
+  left: 70px;
+}
+
+.coach-card__skills-block {
+  width: 87%;
+  margin: 0 auto;
+}
+
+.coach-card__skills-subject {
+  display: none;
+}
+
+.coach-card__skills-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  font-size: 0;
+  list-style: none;
+}
+
+.coach-card__skills-item {
+  display: flex;
+  width: 50%;
+  font-size: 14px;
+  justify-content: space-between;
+}
+
+.coach-card__skills-title {
+  font-size: 14px;
+  color: #000;
+}
+
+.coach-card__skills-text {
+  color: #74e196;
+  padding: 0; 
+  margin: 0;
+}
+
+.coach-card__skills-icon {
+  display: none;
+}
+
+.coach-card__skills-link {
+  font-size: 17px;
+  text-decoration: none;
+  color: #74e196;
+}
+
+.coach-card__btn-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  top: 285px;
+}
+
+.coach-card__btn {
+  display: none;
+}
+
+.coach-card__score-btn {
+  width: 50px;
+  height: 40px;
+  border: 3px solid #000;
+  background-image: url(../images/sprite_iceace.png);
+  background-position: -62px -184px;
+  margin-top: 30px;
+  background-color: transparent;
+}
+
+.coach-card__score {
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.coach-card__info {
+  width: 86%;
+  margin: 0 auto;
+}
+
+.coach-card__title {
+  font-size: 14px;
+}
+
+.coach-card__text {
+  font-family: "PT Sans", sans-serif;
+  font-size: 12px;
+}
+
+.coach-card__video {
+  margin: 0 auto;
+  width: 290px;
+  height: 230px;
+  border: none;
+}
+
+.coach-card__video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.coach-reviews {
+  background-image: url(../images/instructors/reviews-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+
+}
+
+.coach-review__title {
+  font-family: "PT Sans", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.coach-reviews__item {
+  position: relative;
+  padding-top: 40px;
+}
+
+.coach-reviews__user {
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+}
+
+.coach-reviews__link {
+  display: inline-block;
+  width: 40px;
+  height: 25px;
+  background-image: url(../images/sprite_iceace.png);
+  background-position: -7px -240px;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+
+.coach-reviews__text {
+  font-family: "PT Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 15px;
+  padding-bottom: 55px;
+  width: 92%;
+}
+
+.coach-reviews__btn {
+  display: block;
+  border: 3px solid #74e196;
+  color: #000;
+  margin: 22px auto;
+}
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!РАСПИСАНИЕ!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.page-title {
+  text-align: center;
+  font-size: 24px;
+}
+
+.choice-table {
+  display: none;
+}
+
+.program-form__label {
+  display: block;
+  width: 290px;
+  margin: 0 auto;
+  font-size: 12px;
+}
+
+.program-form__select {
+  display: block;
+  width: 290px;
+  height: 27px;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}
+
+.program-form__select option {
+  font-size: 12px;
+}
+
+.program-form__select-wrap{
+  position: relative;
+  
+  width: 290px;
+  height: 27px;
+  box-sizing: border-box;
+  margin: 0 auto;
+    margin-bottom: 5px;
+
+  
+}
+
+.program-form__select-date {
+  display: none;
+  
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 4px;
+  left: 265px;
+  background-image: url(../images/shedule/calendar_icon.png);
+}
+
+.program-form__btn {
+  display: block;
+  color: #000;
+  border: 3px solid #74e196;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 17px;
+}
+
+.instr-card {
+  position: relative;
+  border: 2px solid #000;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.instr-card__photo {
+  position: relative;
+  margin-bottom: 30px;  
+}
+
+.instr-card__photo-wrap {
+  border: 3px solid #74e196;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+}
+
+.instr-card__img {
+  width: 80px;
+  height: 80px;
+}
+
+.instr-card__caption {
+  display: block;
+  color: #fff;
+  background-color: #000;
+  width: 140px;
+  height: 40px;
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 60px;
+  margin: auto;
+}
+
+.instr-card__inner {
+  display: block;
+  width: 90%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.instr-card__title,
+.instr-card__subtitle {
+  font-size: 14px;
+}
+
+.instr-card__date {
+  font-size: 12px;
+}
+
+.instr-card__text {
+  font-family: "PT Sans", sans-serif;
+  font-size: 12px;
+}
+
+.instr-card__link {
+  position: absolute;
+  text-decoration: none;
+  border-bottom: 2px solid #74e196;
+  color: #000;
+  font-size: 12px;
+  right: 10px;
+  bottom: 10px;
+}
+
+.instr-card__price-block {
+  width: 150px;
+  padding-left: 10px;
+/*  border: 1px solid #000;*/
+}
+
+.instr-card__price {
+  display: block;
+  font-size: 16px;
+/*  padding-bottom: 20px;*/
+  font-weight: bold;
+
+}
+
+.instr-card__btn {
+  display: block;
+  color: #74e196;
+  border: 3px solid #000;
+  margin-bottom: 10px;
+}
+
+.pagination {
+text-align: center;
+}
+
+.pagination__list {
+  padding: 0;
+}
+
+.pagination__item {
+  display: inline-block;
+  padding: 0 2px;
+}
+
+.pagination__link {
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.pagination__link-icon {
+  display: inline-block;
+  width: 20px;
+  height: 30px;
+  background-image: url(../images/sprite_iceace.png);
+  vertical-align: middle;
+}
+
+.pagination__link-icon--prev {
+  background-position: -5px -188px;
+}
+
+.pagination__link-icon--next {
+  background-position: -33px -188px;
+}
+
+
+.form__title {
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.form__label {
+  display: block;
+  width: 290px;
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 10px;
+  margin: 0 auto;
+}
+
+.form__input {
+  display: block;
+  width: 290px;
+  height: 27px;
   border: 1px solid #000;
-margin-right: 0;  
+  margin: 0 auto;
+}
+
+.form__textarea {
+  display: block;
+  width: 290px;
+  height: 100px;
+  border: 1px solid #000;
+  margin: 0 auto;
+}
+
+.form__submit {
+  display: block;
+  color: #74e196;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 2px solid #000;
+  line-height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 470px) {
+
+.services-item__img-wrap {
+  width: 100%;
+  height: auto;
+}
+
+}
+
+.services-item--horizontal .services-item__img-wrap {
+  width: 100%;
+  height: 200%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 767px) {
+
+.promo {
+  background-image: url(../images/index/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 475px;
+
+}
+.promo__title {
+  width: 225px;
+  font-size: 24px;
+  margin-left: 85px;
+}
+
+.promo__title span {
+  font-size: 20px;
+  line-height: 50px;
+}
+
+.promo__btn {
+  display: none;
+}
+
+.services__text {
+  font-size: 20px;
+}
+
+.services__list {
+  display: flex;
+}
+
+.services-item,
+.services-item--horizontal {
+  display: flex;
+  flex-direction: column;
+}
+
+.services-item--horizontal:last-child {
+ display: none;
+  
+}
+
+.services-item__img-title,
+.services-item__img-link {
+  display: none;
+}
+
+.services-item__title {
+  display: block;
+  position: static;
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+  margin-left: 5px;
+}
+
+.services-item__text {
+  display: block;
+}
+
+.services-item__meta {
+  display: inline-block;
+}
+
+.services-item__link {
+  display: inline-block;
+  position: static;
+  float: right;
+  vertical-align: middle;
+  width: 35px;
+  height: 30px;
+  border: 1px solid red;
+  background-image: url(../images/sprite_iceace.png);
+  background-position: -100px -185px;
+}
+
+.trust__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.trust-item {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  box-sizing: border-box;
+}
+
+.trust-item__icon {
+  width: 82px;
+  height: 90px;
+}
+
+.trust-item__title {
+text-align: center;
+
+}
+
+.trust-item__icon {
+  margin: 0 auto;
+}
+
+.sale__title {
+  margin-bottom: 60px;
+}
+
+.sale__list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+
+.sale-item {
+  width: 30%;
+  text-align: center;
+  box-sizing: border-box;
+  padding-bottom: 0;
+}
+
+.sale-item:nth-child(n+2) {
+  display: flex;
+  width: 30%;
+  text-align: center;
+}
+
+.sale__btn {
+  display: block;
+  border: 3px solid #fff;
+  color: #74e196;
+  margin: 0 auto;
+}
+
+.team__text {
+  display: block;
+  font-family: "PT Sans", sans-serif;
+  font-size: 15px;
+  width: 760px;
+  margin: 0 auto;
+  margin-bottom: 65px;
+  margin-top: 450px;
+}
+
+/*ИНСТРУКТОРЫ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+
+.coach-card__photo-wrap {
+  display: inline-block;
+  margin: 0;
+  width: 215px;
+  height: 215px;
+}
+
+.coach-card__photo-btn {
+  display: none;
+}
+
+.coach-card__skills-block {
+  display: inline-block;
+  vertical-align: top;
+  width: 370px;
+}
+
+.coach-card__photo-subject {
+  display: none;
+}
+
+.coach-card__skills-subject {
+  display: block;
+  margin: 0;
+}
+
+.coach-card__skills-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.coach-card__skills-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coach-card__skills-item:first-child .coach-card__skills-text {
+  display: none;
+}
+
+.coach-card__skills-text {
+  color: #000;
+}
+
+.coach-card__skills-link {
+  color: #000;
+}
+
+.coach-card__skills-icon {
+  display: block;
+  width: 45px;
+  height: 80px;
+  margin: 0 auto;
+  background-image: url(../images/sprite_iceace.png);
+  background-position: -255px -2px;
+}
+
+.coach-card__btn {
+  display: none;
+}
+
+.coach-card__btn-block {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.coach-card__info {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 400px;
+}
+
+.coach-card__video {
+  display: inline-block;
+  margin-left: 20px;
+  height: 200px;
+}
+
+
+/*РАСПИСАНИЕ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+
+
+
+.program-form {
+  display: none;
+}
+
+.choice-table {
+  display: table;
+  margin: 0 auto;
+}
+
+.choice-table {
+  border-collapse:collapse;
+  width: 97%;
+  margin-bottom: 20px;
+}
+
+.choice-table td {
+  border: 3px solid #000;
+}
+
+.choice-table__link {
+  text-decoration: none;
+  color: #74e196;
+}
+
+.instr-card {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
+.instr-card__photo-wrap {
+  width: 200px;
+  height: 200px;
+}
+
+.instr-card__img {
+  width: 200px;
+  height: 200px;
+}
+
+.instr-card__caption {
+  width: 200px;
+  height: 50px;
+  line-height: 20px;
+  padding-top: 5px;
+  top: 170px;
+}
+
+.instr-card__inner {
+  width: 300px;
+}
+
+.instr-card__link {
+  position: static;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1200px) {
+
+.container {
+  width: 1170px;
+}
+
+.promo__container {
+  display: none;
+}
+
+.promo {
+  height: 645px;
+}
+
+.promo__logo {
+  display: none;
+}
+
+.promo__title {
+  width: 550px;
+  margin-top: 105px;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.promo__title span {
+  color: #fff;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 130px;
+}
+
+.page-header {
+  display: block;
+  position: static;
+  width: 100%;
+  background-color: white;
+}
+
+.promo__burger {
+  display: none;
+}
+
+.page-header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header__logo {
+  display: none;
+}
+
+.page-header__logo-desktop {
+  display: block;
+  height: 55px;
+}
+
+.page-header__main-nav {
+  width: 550px;
+  margin-top: 0;
+}
+
+.page-header__socials {
+  display: none;
+}
+
+.page-header__contacts .contacts__mail {
+  display: none;
+}
+
+
+.main-nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.main-nav__item {
+  list-style: none;
+  border-bottom: none;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.main-nav__link {
+  text-decoration: none;
+  font-size: 15px;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.main-nav__link:hover {
+  border-bottom: 5px solid #74e196;
+}
+
+.page-header__contacts {
+
+}
+
+.contacts {
+  
+}
+
+.contacts__phone {
+  text-decoration: none;
+  font-size: 22px;
+  color: #000;
+/*  width: 200px;*/
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.page-header__btn {
+  border: 3px solid #000;
+  color: #74e196;
+}
+
+
+/*!!!!!!!!!!!!!!!!!!!services!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.services__title {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.services__text {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.services__list {
+  display: block;
+  overflow: hidden;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.services-item {
+  display: block;
+  width: 33.33%;
+  float: left;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.services-item--horizontal {
+  width: 66.66%;
+  float: left;
+}
+
+.services-item--horizontal:last-child {
+  display: block;
+}
+
+.services-item--horizontal .services-item__img,
+.services-item--horizontal .services-item__info {
+  height: 240px;
+  width: 50%;
+  float: left;
+}
+
+.services-item--horizontal .services-item__info {
+  padding-left: 20px;
+}
+
+
+.services-item__img {
+  height: 240px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.services-item__info {
+  height: 240px;
+  box-sizing: border-box;
+  float: left;
+}
+
+.services-item__title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.services-item__text {
+  font-family: "PT Sans", sans-serif;
+  font-size: 15px;
+}
+
+.services-item__footer {
+  border: 1px solid #000;
+}
+
+.services-item__meta {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 35px;
+  font-size: 20px;
+  font-weight: bold;
+  
+}
+
+.services-item__link {
+  display: inline-block;
+  width: 45px;
+  height: 35px;
+  border: 1px solid #000;
+  float: right;
+  background-image: url(../images/sprite_iceace.png);
+  background-position: -95px -185px;
+}
+
+
+/* !!!!!!!!!!!!TRUST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.trust {
+  text-align: center;
+}
+
+.trust__container {
+
+}
+
+.trust__title {
+  font-size: 40px;
+}
+
+.trust__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.trust-item {
+  display: flex;
+  flex-direction: column;
+  width: 33.33%;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.trust-item__title {
+  font-size: 20px;
+}
+
+.trust-item__text {
+  font-family: "PT Sans", sans-serif;
+  font-size: 15px;
+}
+
+.trust-item__text:before {
+  width: 82px;
+  height: 90px;
+  content: '';
+  background-image: url(../images/sprite_iceace.png);
+  background-size: 100%;
+}
+
+.trust-item__icon {
+
+}
+
+.trust-item__icon--first {
+
+}
+
+.trust-item__icon--second {
+  background-position: -75px 0;
+}
+
+.trust-item__icon--third {
+  background-position: -157px 0;
+}
+
+.trust-item__icon--fourth {
+  background-position: 0 -90px;
+}
+
+.trust-item__icon--fifth {
+  background-position: -78px -90px;
+}
+
+.trust-item__icon--sixth {
+  background-position: -160px -90px;
+}
+
+
+
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!SALE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+
+
+
+.sale {
+  background-image: url(../images/index/sale-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  color: #fff;
+  font-size: 0;
+}
+
+.sale__container {
+  padding-bottom: 40px
+}
+
+.sale__title {
+  font-size: 40px;
+  text-align: center;
+}
+
+.sale-item {
+  display: inline-block;
+  width: 33.33%;
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 45px;
+}
+
+.sale-item__title {
+  font-size: 22px;
+  text-align: center;
+  margin-top: -50px;
+}
+
+.sale-item__text {
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.sale-item__text span {
+  color: #74e196;
+}
+
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!TEAM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+.team {
+  background: url(../images/index/team-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
+.team__container {
+  text-align: center;
+  height: 800px;
+}
+
+.team__title {
+  margin-top: 50px;
+  font-size: 40px;
+}
+
+.team__btn {
+  width: 220px;
+}
+
+.network__title {
+  text-align: center;
+  font-size: 40px;
+}
+
+.network__text {
+  width: 780px;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 43px;
+}
+
+
+
+/*!!!!!!!!!!!COMMUNITY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+
+.community__container {
+
+}
+
+.community__title {
+  font-size: 40px;
+}
+
+.community__list {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+
+/*!!!!!!!!!!!!ФУТЕР!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+
+
+.page-footer {
+  background-image: url(../images/index/footer-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.page-footer__block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-footer__logo {
+  width: 160px;
+  height: 50px;
+}
+
+.page-footer__socials {
+  display: block;
+}
+
+.socials__list {
+  padding: 0;
+}
+
+.socials__item {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.socials__link {
+  display: block;
+  width: 45px;
+  height: 35px;
+  background-image: url(../images/sprite_iceace.png);
+}
+
+.socials__link--youtube {
+  background-position: -69px -235px;
+}
+
+.socials__link--instagram {
+  background-position: -186px -235px;
+}
+
+.socials__link--facebook {
+  background-position: -125px -235px;
+}
+
+.socials__link--vkontakte {
+  background-position: -4px -235px;
+}
+
+.page-footer__contacts {
+
+}
+
+.contacts__phone,
+.contacts__mail {
+  display: block;
+  margin-right: 0;  
 }
 
 
@@ -528,13 +2027,11 @@ margin-right: 0;
   display: inline-block;
   width: 350px;
   vertical-align: middle;
-  
 }
 
 .page-footer__nav {
-  display: inline-block;
-  vertical-align: middle;
-  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav__list {
@@ -542,9 +2039,8 @@ margin-right: 0;
 }
 
 .nav__item {
+  margin: 0 10px;
   display: inline-block;
-  margin-left: 40px;
-  border: 2px solid red;
 }
 
 .nav__link {
@@ -555,13 +2051,16 @@ margin-right: 0;
   text-transform: uppercase;
 }
 
-.page-header__contacts {
-  display: inline-block;
-  vertical-align: middle;
+.nav__link:before {
+  text-decoration: none;
+  font-size: 15px;
+  color: grey;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 
-/*СТРАНИЦА ИНСТРУКТОРОВ!!!!!!!!!!!!!!*/
+/*СТРАНИЦА ИНСТРУКТОРОВ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 
 .page-title {
@@ -578,78 +2077,70 @@ margin-right: 0;
 }
 
 .search-form__submit {
-  display: block;
-  background-image: url(../images/sprite_iceace.png);
-
   width: 35px;
   height: 35px;
+  background-position: -257px 48px; 
 }
 
 .coach-photos__list {
-  padding: 0;
+  overflow-x: hidden;
 }
-
-.coach-photos__item {
-  box-sizing: border-box;
-  width: 228px;
-  height: 228px;
-  display: inline-block;
-}
-
 
 .coach-card {
   padding-top: 40px;
   width: 1040px;
-  border: 1px solid #000;
-margin: 0 auto;  
+  margin: 0 auto;
 }
 
 .coach-card__photo-wrap {
   display: inline-block;
   vertical-align: top;
-  
+}
+
+.coach-card__photo-btn {
+  display: none;
+}
+
+.coach-card__photo-subject {
+  display: none;
 }
 
 .coach-card__skills-block {
   display: inline-block;
   width: 450px;
   vertical-align: top;
-  border: 1px solid #000;
 }
 
 .coach-card__skills-subject {
   display: block;
   font-size: 30px;
-  border: 1px solid #000;
   margin: 0;
 }
 
 .coach-card__skills-list {
+  display: flex;
+  justify-content: space-between;
   padding: 0;
-  font-size: 0;
 }
 
 .coach-card__skills-item {
   display: inline-block;
-  border: 1px solid #000;
   vertical-align: top;
   width: 32%;
   font-size: 14px;
   text-align: center;
-  
 }
 
 .coach-card__skills-title {
   font-size: 25px;
 }
 
+.coach-card__skills-text:first-child {
+  display: none;
+}
+
 .coach-card__skills-icon {
-  width: 45px;
-  height: 80px;
-  border: 1px solid #000;
-  margin: 0 auto;
-  background-image: url(../images/sprite_iceace.png);
-  background-position: -255px -2px;
+
 }
 
 .coach-card__skills-link {
@@ -658,53 +2149,48 @@ margin: 0 auto;
   color: #000;
 }
 
-.coach-card__btn-block {
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 30px;
-}
-
 .coach-card__btn {
   display: block;
+    width: 135px;
   border: 3px solid #000;
   color: #74e196;
-
-}
-
-.coach-card__score-btn {
-  width: 60px;
-  height: 45px;
-  border: 3px solid #000;
-  background-image: url(../images/sprite_iceace.png);
-  background-position: -60px -182px;
-  margin-top: 30px;
-}
-
-.coach-card__score {
-  font-size: 20px;
-  margin-left: 20px;
+  margin: 0 auto;
+  position: absolute;
+  top: 20px;
+  right: 50px;
 }
 
 .coach-card__info {
   display: inline-block;
   width: 500px;
-  border: 1px solid #000;
+}
+
+.coach-card__title {
+  font-size: 20px;
+}
+
+.coach-card__text {
+  font-family: "PT Sans", sans-serif;
+  font-size: 15px;
 }
 
 .coach-card__video {
   display: inline-block;
   width: 500px;
   height: 280px;
-  border: 1px solid #000;
   vertical-align: top;
-  
+  margin-left: 134px;
 }
 
 .coach-reviews {
-  background: url(../images/instructors/reviews-bg.jpg) no-repeat center;
   width: 1040px;
   height: 220px;
-  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.coach-review__title {
+  display: none;
 }
 
 .coach-reviews__item {
@@ -722,54 +2208,28 @@ margin: 0 auto;
 }
 
 .coach-reviews__link {
-  display: inline-block;
-  width: 35px;
-  height: 25px;
-  background-image: url(../images/sprite_iceace.png);
-  background-position: -60px -182px;
-  vertical-align: top;
   
 }
 
 .coach-reviews__text {
   width: 700px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 15px;
 }
 
-.coach-photos__link {
-/*  display: block;
-*/  margin: 0;
-  padding: 0;
-}
-.coach-photos__img {
-  
+.coach-reviews__btn {
+  display: none;
 }
 
 
 
 
 
-/*СТРАНИЦА РАСПИСАНИЯ!!!!!!!!!!!!!!*/
+/*СТРАНИЦА РАСПИСАНИЯ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 .page-title {
   text-align: center;
 }
-
-
-.choice-table {
-border-collapse:collapse;
-width: 1160px;
-}
-
-.choice-table td {
-  border: 3px solid #000;
-}
-
-.choice-table__link {
-  text-decoration: none;
-  color: #74e196;
-}
-
-
 
 .instr-card {
   border: 2px solid #000;
@@ -778,49 +2238,23 @@ width: 1160px;
 }
 
 .instr-card__photo {
-  display: inline-block;
-  border: 1px solid #000;
   width: 30%;
 }
 
 .instr-card__photo-wrap {
-  display: inline-block;
-  border: 3px solid #74e196;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  overflow: hidden;
-  vertical-align: top;
-  position: relative;
-  z-index: 1;
-  margin-left: 55px;
-}
 
-.instr-card__img {
-  width: 200px;
-  height: 200px;
 }
 
 .instr-card__caption {
-  display: block;
-  color: #fff;
-  background-color: #000;
   width: 200px;
   height: 50px;
-  text-align: center;
   line-height: 20px;
   padding-top: 5px;
-  box-sizing: border-box;
-  position: relative;
-  z-index: 2;
-  margin: -45px 0 0 55px;
+  top: 170px;
 }
 
 .instr-card__inner {
-  display: inline-block;
   width: 500px;
-  border: 1px solid #000; 
-  vertical-align: top;
 }
 
 
@@ -933,4 +2367,4 @@ text-align: center;
   line-height: 30px;
 }
 
-
+}
