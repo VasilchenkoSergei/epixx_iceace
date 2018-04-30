@@ -63,18 +63,5 @@ $(document).ready(function(){
       }
     ]
   });
-  // $('.community__item').on('click', function(event){
-  //   event.preventDefault();
-  //   var targetId = $(this).attr('href');
-  //   $('.instructor--shown').removeClass('instructor--shown');
-  //   $(targetId).addClass('instructor--shown');
-  //   $('.instructors__item--active').removeClass('instructors__item--active');
-  //   $(this).addClass('instructors__item--active');
-  // });
-
-
-  // $('#burger').on('click', function(){
-  //   $('#menu').slideToggle(1200);
-  // });
 
 });
