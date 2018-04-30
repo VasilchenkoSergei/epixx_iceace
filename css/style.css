@@ -66,14 +66,19 @@ body {
 }
 
 .promo__burger {
+  display: block;
   position: absolute;
   width: 40px;
   height: 30px;
-  border: 1px solid green;
   top: 10px;
   right: 0;
 }
 
+.promo__burger-line {
+  height: 4px;
+  border: 2px solid #fff;
+  margin-bottom: 8px;
+}
 
 .promo__title {
   width: 220px;
@@ -118,12 +123,16 @@ body {
 }
 
 .page-header {
- display: none; 
+  display: none; 
   position: absolute;
   z-index: 10;
   width: 100%;
   background-color: white;
   top: 0;
+}
+
+.page-header--active {
+  display: block;
 }
 
 .page-header__container {
@@ -694,6 +703,19 @@ body {
   opacity: 0.3;
 }
 
+.coach-photos__link:hover:before {
+  content: '';
+  display: none;
+}
+
+.coach-photos__link:focus:before {
+  background-color: green;
+  opacity: 0.5;
+}
+
+.coach-photos__link:focus {
+  outline: none;
+}
 
 .coach-photos__link {
   position: relative;
@@ -702,11 +724,6 @@ body {
   width: 230px;
   height: 230px;
 }
-
-.coach-photos__link:hover {
- opacity: 0.8;
-}
-
 
  .coach-photos__name {
   position: absolute;
@@ -1065,18 +1082,17 @@ body {
   font-size: 12px;
   right: 10px;
   bottom: 10px;
+  font-weight: bold;
 }
 
 .instr-card__price-block {
   width: 150px;
   padding-left: 10px;
-/*  border: 1px solid #000;*/
 }
 
 .instr-card__price {
   display: block;
   font-size: 16px;
-/*  padding-bottom: 20px;*/
   font-weight: bold;
   margin-bottom: 10px;
 
@@ -1328,7 +1344,6 @@ text-align: center;
 
 .services-item__img {
   height: 250px;
-/*  margin-bottom: 20px;*/
 }
 
 .services-item--horizontal .services-item__img .services-item__img-wrap {
@@ -1604,21 +1619,29 @@ margin-top: 30px;
 .choice-table {
   display: table;
   margin: 0 auto;
-}
-
-.choice-table {
   border-collapse:collapse;
   width: 97%;
   margin-bottom: 20px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.choice-table th {
+  font-family: "Futura PT", sans-serif;
+  font-size: 15px;
+  text-align: left;
 }
 
 .choice-table td {
   border: 3px solid #000;
+  height: 45px;
 }
 
 .choice-table__link {
   text-decoration: none;
   color: #74e196;
+  text-transform: uppercase;
 }
 
 .instr-card {
@@ -1654,6 +1677,7 @@ margin-top: 30px;
 
 .instr-card__link {
   position: static;
+
 }
 
 }
@@ -1903,8 +1927,6 @@ width: 1170px;
   float: left;
 }
 
-
-
 .services-item__img {
   height: 240px;
   box-sizing: border-box;
@@ -1923,17 +1945,10 @@ width: 1170px;
   float: left;
 }
 
-
-
 .services-item--horizontal .services-item__info {
   padding-left: 20px;
   margin-top: 0;
 }
-
-
-/*.services-item__title:first-child {
-  margin-top: 30px;
-}*/
 
 .services-item__title {
   font-weight: bold;
@@ -2085,16 +2100,11 @@ width: 1170px;
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!TEAM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 */
 .team {
-/*  background: url(../images/index/team-bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;*/
+
 }
 
 .team__container {
- /* height: 800px;*/
-/* width: 100%;*/
+
 }
 
 .team__title {
@@ -2346,7 +2356,7 @@ width: 1170px;
 
 .coach-card__btn {
   display: block;
-    width: 135px;
+  width: 135px;
   border: 3px solid #000;
   color: #74e196;
   margin: 0 auto;

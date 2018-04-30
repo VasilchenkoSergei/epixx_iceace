@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+    $('.promo__burger').on('click', function() {
+    $('header').addClass('page-header--active');
+    $(this).find('header').removeClass('page-header--active');
+    $('header').toggle();
+  });
+
+    // $('.promo__burger').on('click', function() {
+    // $('.page-header').css('display','block');
+    // $(this).find('.page-header').css('display','none');
+    // $('.page-header').toggle();
+    //   });
+
   $('.community__list').slick({
     arrows: false,
     slidesToShow: 6,
