@@ -80,7 +80,7 @@ body {
   margin-bottom: 8px;
 }
 
-.promo__burgerline--black {
+.promo__burgerline-black {
   display: block;
   position: absolute;
   width: 100%;
@@ -89,8 +89,8 @@ body {
   top: 10px;
 }
 
-.promo__burgerline--black:before,
-.promo__burgerline--black:after {
+.promo__burgerline-black:before,
+.promo__burgerline-black:after {
   content: '';
   display: block;
   width: 100%;
@@ -101,32 +101,32 @@ body {
   transition-delay: 0.3s, 0s;
 }
 
-.promo__burgerline--black:before {
+.promo__burgerline-black:before {
   top: -10px;
   transition-property: top, transform;
 }
 
-.promo__burgerline--black:after {
+.promo__burgerline-black:after {
   bottom: -10px;
   transition-property: bottom, transform;
 }
 
-.promo__burgerline--black.active  {
+.promo__burgerline-black--active  {
   background: none;
 }
 
-.promo__burgerline--black.active:before {
+.promo__burgerline-black--active:before {
   top: 0;
   transform: rotate(45deg);
 }
 
-.promo__burgerline--black.active:after {
+.promo__burgerline-black--active:after {
   bottom: 0;
   transform: rotate(-45deg);
 }
 
-.promo__burgerline--black.active:before,
-.promo__burgerline--black.active:after {
+.promo__burgerline-black--active:before,
+.promo__burgerline-black--active:after {
   transition-delay: 0s, 0.3s;
   background-color: green;
 }

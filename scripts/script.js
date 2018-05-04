@@ -4,18 +4,20 @@ $(document).ready(function(){
     $(this).find('header').addClass('page-header--active');
     $(this).find('header').removeClass('page-header--active');
     $('header').toggle();
-
-})();
-
-
-
-  // });
-
+    })();
     // $('.promo__burger').on('click', function() {
-    // $('.page-header').css('display','block');
-    // $(this).find('.page-header').css('display','none');
-    // $('.page-header').toggle();
-    //   });
+    // $(this).find('#burgerline').addClass('promo__burgerline-black--active');
+    // $(this).find('#burgerline').removeClass('promo__burgerline-black--active');
+    // })();
+
+// (function() {
+ 
+//   document.querySelector( ".promo__burgerline-black" )
+//   .addEventListener( "click", function() {
+//       this.classList.toggle( "active" );
+//     });
+
+// });
 
   $('.community__list').slick({
     arrows: false,
@@ -69,14 +71,14 @@ $(document).ready(function(){
     ]
   });
 
-});
+
 
 
 
 
 // (function() {
  
-//   var toggles = document.querySelectorAll(".promo__burgerline--black");
+//   var toggles = document.querySelectorAll(".promo__burger");
  
 //   for (var i = toggles.length - 1; i >= 0; i--) {
 //     var toggle = toggles[i];
@@ -93,11 +95,6 @@ $(document).ready(function(){
 // })();
 
 
-(function() {
- 
-  document.querySelector( ".promo__burgerline--black" )
-.addEventListener( "click", function() {
-      this.classList.toggle( "active" );
-    });
+
 
 })();
