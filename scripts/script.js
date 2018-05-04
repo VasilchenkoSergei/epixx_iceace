@@ -1,10 +1,15 @@
 $(document).ready(function(){
 
     $('.promo__burger').on('click', function() {
-    $('header').addClass('page-header--active');
+    $(this).find('header').addClass('page-header--active');
     $(this).find('header').removeClass('page-header--active');
     $('header').toggle();
-  });
+
+})();
+
+
+
+  // });
 
     // $('.promo__burger').on('click', function() {
     // $('.page-header').css('display','block');
@@ -65,3 +70,34 @@ $(document).ready(function(){
   });
 
 });
+
+
+
+
+// (function() {
+ 
+//   var toggles = document.querySelectorAll(".promo__burgerline--black");
+ 
+//   for (var i = toggles.length - 1; i >= 0; i--) {
+//     var toggle = toggles[i];
+//     toggleHandler(toggle);
+//   };
+ 
+//   function toggleHandler(toggle) {
+//     toggle.addEventListener( "click", function(e) {
+//       e.preventDefault();
+//       (this.classList.contains("active") === true) ? this.classList.remove("active") : this.classList.add("active");
+//     });
+//   }
+
+// })();
+
+
+(function() {
+ 
+  document.querySelector( ".promo__burgerline--black" )
+.addEventListener( "click", function() {
+      this.classList.toggle( "active" );
+    });
+
+})();
