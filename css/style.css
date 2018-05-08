@@ -72,82 +72,130 @@ body {
   height: 30px;
   top: 10px;
   right: 0;
+  z-index: 50;
 }
 
-.promo__burgerline {
-  height: 4px;
-  border: 2px solid #fff;
-  margin-bottom: 8px;
-}
-
-.promo__burgerline-black {
-  display: block;
-  position: absolute;
+.promo__burger .line-1,
+.promo__burger .line-2,
+.promo__burger .line-3 {
+  height: 3px;
   width: 100%;
-  height: 4px;
   background-color: #000;
-  top: 10px;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.promo__burgerline-black:before,
-.promo__burgerline-black:after {
-  content: '';
-  display: block;
+.promo__burger .line-1--white,
+.promo__burger .line-2--white,
+.promo__burger .line-3--white {
+  height: 3px;
   width: 100%;
-  height: 4px;
-  background-color: #000;
-  position: absolute;
-  transition-duration: 0.3s, 0.3s;
-  transition-delay: 0.3s, 0s;
+  background-color: #fff;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.promo__burgerline-black:before {
-  top: -10px;
-  transition-property: top, transform;
+.promo__burger .line-1,
+.promo__burger .line-1--white {
+  animation: animate-line-1-rev 0.7s ease-in-out;
+}
+.promo__burger .line-2,
+.promo__burger .line-2--white {
+  margin: 8px 0;
+  animation: animate-line-2-rev 0.7s ease-in-out;
+}
+.promo__burger .line-3,
+.promo__burger .line-3--white {
+  animation: animate-line-3-rev 0.7s ease-in-out;
 }
 
-.promo__burgerline-black:after {
-  bottom: -10px;
-  transition-property: bottom, transform;
+.promo__burger.active .line-1,
+.promo__burger.active .line-2,
+.promo__burger.active .line-3,
+.promo__burger.active .line-1--white,
+.promo__burger.active .line-2--white,
+.promo__burger.active .line-3--white {
+  background-color: #74e196;
+}
+.promo__burger.active .line-1,
+.promo__burger.active .line-1--white {
+  animation: animate-line-1 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards;
+}
+.promo__burger.active .line-2,
+.promo__burger.active .line-2--white {
+  animation: animate-line-2 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards;
+}
+.promo__burger.active .line-3,
+.promo__burger.active .line-3--white {
+  animation: animate-line-3 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards;
 }
 
-.promo__burgerline-black--active  {
-  background: none;
+.no-animation {
+  animation: none !important;
 }
 
-.promo__burgerline-black--active:before {
-  top: 0;
-  transform: rotate(45deg);
+@keyframes animate-line-1 {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, 12px, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 12px, 0) rotate(45deg);
+  }
 }
-
-.promo__burgerline-black--active:after {
-  bottom: 0;
-  transform: rotate(-45deg);
+@keyframes animate-line-2 {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
 }
-
-.promo__burgerline-black--active:before,
-.promo__burgerline-black--active:after {
-  transition-delay: 0s, 0.3s;
-  background-color: green;
+@keyframes animate-line-3 {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, -12px, 0) rotate(135deg);
+  }
 }
-
-
-
-
-
-
-/*.promo__burgerline1 {
-  transition: 0.5s linear;
+@keyframes animate-line-1-rev {
+  0% {
+    transform: translate3d(0, 12px, 0) rotate(45deg);
+  }
+  50% {
+    transform: translate3d(0, 12px, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
 }
-
-.promo__burgerline1:hover {
-  margin-top: 30px;
+@keyframes animate-line-2-rev {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
-
-.promo__burgerline2:hover {
-  border: none;
-
-}*/
+@keyframes animate-line-3-rev {
+  0% {
+    transform: translate3d(0, -12px, 0) rotate(135deg);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}
 
 .promo__title {
   width: 220px;
@@ -209,8 +257,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-/*  position: relative;*/
-  
 }
 
 .page-header__logo {
@@ -323,15 +369,6 @@ body {
   height: 100%;
 }
 
-/*.services-item__img:before {
-  content: '';
-  background-color: #000;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  opacity: 0.1;
-}*/
-
 .services-item--horizontal .services-item__img-wrap {
   max-width: 100%;
   height: auto;
@@ -342,13 +379,8 @@ body {
   height: 78px;
 }
 
-
 .services-item--horizontal:last-child {
   margin-top: 4px;
-}
-
-.services-item__info {
-
 }
 
 .services-item__title {
@@ -377,10 +409,6 @@ body {
   position: absolute;
   bottom: 8px;
   right: 5px;
-}
-
-.trust {
-
 }
 
 .trust__container {
@@ -468,11 +496,6 @@ body {
   padding-top: 15px;
 }
 
-.sale__list {
-
-}
-
-
 .sale-item {
   width: 100%;
   text-align: center;
@@ -534,7 +557,7 @@ body {
 
 .team__text {
   display: none;
- }
+}
 
 .team__btn {
   width: 220px;
@@ -552,7 +575,6 @@ body {
   text-align: center;
   font-size: 24px;
   margin: 0;
-
 }
 
 .network__text {
@@ -569,7 +591,6 @@ body {
   width: 100%;
 }
 
-
 .community__title {
   display: block;
   color: #000;
@@ -577,11 +598,6 @@ body {
   font-size: 24px;
   text-align: center;
   margin: 0;
-}
-
-.community__list {
-/*  display: flex;
-  justify-content: space-between;*/
 }
 
 .community__item {
@@ -599,10 +615,6 @@ body {
   background-position: center;
   background-size: cover;
   width: 100%;
-}
-
-.page-footer__container {
-
 }
 
 .page-footer__block {
@@ -697,14 +709,6 @@ body {
   display: none;
 }
 
-
-
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!ИНСТРУКТОРЫ!!!!!!!!!!!!!!!!!!!!!!!!
-*/
-
-
-
-
 .search {
   margin-top: 20px;
 }
@@ -716,7 +720,6 @@ body {
   margin-bottom: 20px;
 }
 
-
 .search__container {
   display: flex;
   justify-content: center;
@@ -724,7 +727,6 @@ body {
 
 .search-form {
   position: relative;
-  
 }
 
 .search-form__input {
@@ -819,10 +821,6 @@ body {
   font-weight: bold;
 }
 
-.coach {
-
-}
-
 .coach-card {
   padding-top: 10px;
   position: relative;
@@ -843,7 +841,6 @@ body {
   position: absolute;
   opacity: 0.3;
 }
-
 
 .coach-card__photo {
   width: 100%;
@@ -868,8 +865,7 @@ body {
 
 .coach-card__skills-block {
   width: 150px;
- /* margin: 0 auto;*/
- margin-left: 10%;
+  margin-left: 10%;
 }
 
 .coach-card__skills-subject {
@@ -888,7 +884,6 @@ body {
 
 .coach-card__skills-item {
   display: flex;
-/*  width: 50%;*/
   font-size: 14px;
   justify-content: space-between;
   margin-bottom: 10px;
@@ -1027,9 +1022,6 @@ body {
   margin: 22px auto;
 }
 
-
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!РАСПИСАНИЕ!!!!!!!!!!!!!!!!!!!!!!!*/
-
 .page-title {
   text-align: center;
   font-size: 24px;
@@ -1066,14 +1058,11 @@ body {
   height: 27px;
   box-sizing: border-box;
   margin: 0 auto;
-    margin-bottom: 5px;
-
-  
+  margin-bottom: 5px;
 }
 
 .program-form__select-date {
   display: none;
-  
   position: absolute;
   width: 18px;
   height: 18px;
@@ -1180,7 +1169,6 @@ body {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 10px;
-
 }
 
 .instr-card__btn {
@@ -1225,7 +1213,6 @@ text-align: center;
 .pagination__link-icon--next {
   background-position: -33px -188px;
 }
-
 
 .form__title {
   font-size: 24px;
@@ -1275,25 +1262,12 @@ text-align: center;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 @media (min-width: 400px) {
 
 .coach-card__skills-block {
   width: 150px;
   margin: 0 auto;
 }
-
 
 .instr-card__inner {
   width: 95%;
@@ -1307,14 +1281,6 @@ text-align: center;
 }
 
 
-
-
-
-
-
-
-
-
 @media (min-width: 470px) {
 
 .services-item__img {
@@ -1325,10 +1291,7 @@ text-align: center;
   height: 123px;
 }
 
-
 }
-
-
 
 
 @media (min-width: 530px) {
@@ -1338,35 +1301,6 @@ text-align: center;
 }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (min-width: 767px) {
 
@@ -1434,7 +1368,6 @@ text-align: center;
   height: 100%;
 }
 
-
 .services-item__img-title,
 .services-item__img-link {
   display: none;
@@ -1463,9 +1396,6 @@ text-align: center;
   font-weight: bold;
 }
 
-.services-item__footer {
-
-}
 
 .services-item__meta {
   display: inline-block;
@@ -1494,8 +1424,6 @@ text-align: center;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-/*  margin-left: -10px;
-  margin-right: -10px;*/
 }
 
 .trust-item {
@@ -1517,7 +1445,6 @@ text-align: center;
 
 .trust-item__title {
 text-align: center;
-
 }
 
 .trust-item__icon {
@@ -1573,7 +1500,6 @@ text-align: center;
   padding-top: 500px;
 }
 
-
 .team__text {
   display: block;
   font-family: "PT Sans", sans-serif;
@@ -1585,10 +1511,7 @@ text-align: center;
 
 .team__btn {
   margin-top: 50px;
-/*  margin-bottom: 20px;*/
 }
-
-/*ИНСТРУКТОРЫ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 .coach-card {
   width: 750px;
@@ -1692,12 +1615,6 @@ text-align: center;
   width: 70%;
 }
 
-
-/*РАСПИСАНИЕ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
-
-
-
 .program-form {
   display: none;
 }
@@ -1737,7 +1654,6 @@ text-align: center;
   padding-bottom: 30px;
 }
 
-
 .instr-card__photo-wrap {
   width: 200px;
   height: 200px;
@@ -1763,89 +1679,24 @@ text-align: center;
 
 .instr-card__link {
   position: static;
-
 }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @media (min-width: 1000px) {
 
 .coach-card {
-   margin: 0 auto;
- 
+  margin: 0 auto;
 }
 
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @media (min-width: 1200px) {
 
 .container {
-width: 1170px;
-}
-
-.promo__container {
-
+  width: 1170px;
 }
 
 .promo {
@@ -1911,7 +1762,6 @@ width: 1170px;
   display: none;
 }
 
-
 .main-nav__list {
   display: flex;
   flex-direction: row;
@@ -1942,14 +1792,6 @@ width: 1170px;
   border-bottom: 5px solid #74e196;
 }
 
-.page-header__contacts {
-
-}
-
-.contacts {
-  
-}
-
 .contacts__phone {
   text-decoration: none;
   font-size: 22px;
@@ -1962,9 +1804,6 @@ width: 1170px;
   border: 3px solid #000;
   color: #74e196;
 }
-
-
-/*!!!!!!!!!!!!!!!!!!!services!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 .services__title {
   font-size: 40px;
@@ -1999,8 +1838,6 @@ width: 1170px;
   float: left;
   padding-left: 10px;
 }
-
-
 
 .services-item--horizontal:last-child {
   display: block;
@@ -2046,17 +1883,12 @@ width: 1170px;
   font-size: 15px;
 }
 
-.services-item__footer {
-
-}
-
 .services-item__meta {
   display: inline-block;
   vertical-align: middle;
   line-height: 35px;
   font-size: 20px;
   font-weight: bold;
-  
 }
 
 .services-item__link {
@@ -2068,15 +1900,8 @@ width: 1170px;
   background-position: -95px -185px;
 }
 
-
-/* !!!!!!!!!!!!TRUST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
 .trust {
   text-align: center;
-}
-
-.trust__container {
-
 }
 
 .trust__title {
@@ -2117,14 +1942,6 @@ width: 1170px;
   background-size: 100%;
 }
 
-.trust-item__icon {
-
-}
-
-.trust-item__icon--first {
-
-}
-
 .trust-item__icon--second {
   background-position: -75px 0;
 }
@@ -2145,15 +1962,6 @@ width: 1170px;
   background-position: -160px -90px;
 }
 
-
-
-
-
-/*!!!!!!!!!!!!!!!!!!!!!!SALE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-*/
-
-
-
 .sale {
   background-image: url(../images/index/sale-bg.jpg);
   background-repeat: no-repeat;
@@ -2172,25 +1980,9 @@ width: 1170px;
   text-align: center;
 }
 
-.sale-item {
- 
-}
-
 .sale-item__title {
   font-size: 22px;
   text-align: center;
-}
-
-
-
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!TEAM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-*/
-.team {
-
-}
-
-.team__container {
-
 }
 
 .team__title {
@@ -2213,23 +2005,9 @@ width: 1170px;
   width: 770px;
 }
 
-
-
-/*!!!!!!!!!!!COMMUNITY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
-
-.community__container {
-
-}
-
 .community__title {
   font-size: 40px;
 }
-
-
-/*!!!!!!!!!!!!ФУТЕР!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-*/
-
 
 .page-footer {
   background-image: url(../images/index/footer-bg.jpg);
@@ -2245,10 +2023,6 @@ width: 1170px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-
-.page-footer__logo {
-
 }
 
 .page-footer__logo-img {
@@ -2292,16 +2066,11 @@ width: 1170px;
   background-position: -4px -235px;
 }
 
-.page-footer__contacts {
-
-}
-
 .contacts__phone,
 .contacts__mail {
   display: block;
   margin-right: 0;
 }
-
 
 .page-footer__copyright {
   width: 350px;
@@ -2331,18 +2100,6 @@ width: 1170px;
   text-transform: uppercase;
 }
 
-/*.nav__link:before {
-  text-decoration: none;
-  font-size: 15px;
-  color: grey;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-*/
-
-/*СТРАНИЦА ИНСТРУКТОРОВ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
-
 .search__page-title {
   font-size: 40px;
   margin-bottom: 50px;
@@ -2360,10 +2117,6 @@ width: 1170px;
   width: 35px;
   height: 35px;
   background-position: -257px 48px; 
-}
-
-.coach-photos__list {
-
 }
 
 .coach-card {
@@ -2403,20 +2156,8 @@ width: 1170px;
   padding: 0;
 }
 
-.coach-card__skills-item {
-
-}
-
-.coach-card__skills-title {
-
-}
-
 .coach-card__skills-text:first-child {
   display: none;
-}
-
-.coach-card__skills-icon {
-
 }
 
 .coach-card__skills-link {
@@ -2441,7 +2182,6 @@ width: 1170px;
   right: 40px;
   top: 110px;
 }
-
 
 .coach-card__info {
   display: inline-block;
@@ -2479,15 +2219,10 @@ width: 1170px;
   padding-left: 50px;
   padding-top: 30px;
   background-position: -100px 0;
-
 }
 
 .coach-reviews__user {
   display: inline-block;
-}
-
-.coach-reviews__link {
-  
 }
 
 .coach-reviews__text {
@@ -2503,10 +2238,6 @@ width: 1170px;
   margin-top: 80px;
 }
 
-
-
-/*СТРАНИЦА РАСПИСАНИЯ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
 .page-title {
   text-align: center;
 }
@@ -2519,10 +2250,6 @@ width: 1170px;
 
 .instr-card__photo {
   width: 30%;
-}
-
-.instr-card__photo-wrap {
-
 }
 
 .instr-card__caption {
@@ -2553,7 +2280,6 @@ width: 1170px;
 .instr-card__text {
   font-size: 15px;
 }
-
 
 .instr-card__text {
   font-family: "PT Sans", sans-serif;
@@ -2587,12 +2313,11 @@ width: 1170px;
 }
 
 .pagination {
-text-align: center;
+  text-align: center;
 }
 
 .pagination__list {
   padding: 0;
-
 }
 
 .pagination__item {
